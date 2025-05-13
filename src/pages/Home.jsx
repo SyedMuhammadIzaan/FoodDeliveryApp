@@ -3,6 +3,7 @@ import Herobanner from "../components/Herobanner";
 
 import "../style/Home.scss";
 import { foodCategory } from "../constant";
+import Card from "../components/Card";
 const Home = () => {
 	return (
 		<div>
@@ -39,7 +40,7 @@ const Home = () => {
 				</div>
 			</section>
 			<section className="food-items-section">
-
+				<Card />
 			</section>
 		</div>
 	);
