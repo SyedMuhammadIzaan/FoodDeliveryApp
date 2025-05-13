@@ -1,0 +1,200 @@
+@import "../style/abstract/mixins/media.scss";
+
+.navbar {
+	box-sizing: border-box;
+	font-size: 16px;
+
+	.navbar-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.appLogo {
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+
+		.nav-links {
+			font-size: 1.2em;
+			width: 25%;
+			display: flex;
+			justify-content: space-evenly;
+
+			&.desktop-only {
+				display: flex;
+			}
+		}
+
+		.navbar-buttons {
+			width: 5%;
+			display: flex;
+			justify-content: space-evenly;
+      		align-items: center;
+
+			.nav-icon {
+				cursor: pointer;
+			}
+
+			.signInBtn {
+				width: 90px;
+				border-radius: 15px;
+				padding: 0.3em;
+				box-sizing: border-box;
+				cursor: pointer;
+
+				&:hover {
+					background-color: rgb(245, 145, 145);
+					border: 2px solid rgb(253, 89, 89);
+					color: white;
+					transition: all 0.5s ease-in-out;
+				}
+			}
+
+			.hamburger-icon {
+				display: none;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+// Slide-in mobile menu
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 60%;
+	height: 100vh;
+	background-color: #fff;
+	box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: right 0.3s ease-in-out;
+	z-index: 1000;
+
+	.closeMenu {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2rem;
+		cursor: pointer;
+		color: #333;
+
+		&:hover {
+			color: red;
+		}
+	}
+	a {
+		margin: 1em 0;
+		font-size: 1.5em;
+		color: black;
+		text-decoration: none;
+	}
+}
+
+.mobile-menu.open {
+	right: 0;
+}
+
+// Mobile-specific styles (320px to 480px)
+@include respond-between(480px, 320px) {
+	.navbar {
+		.navbar-item {
+			flex-direction: row;
+
+			.nav-links {
+				&.desktop-only {
+					display: none;
+				}
+			}
+
+			.navbar-buttons {
+				width: 36%;
+				justify-content: space-between;
+
+				.nav-icon {
+					display: none;
+				}
+
+				.hamburger-icon {
+					display: block;
+				}
+
+				.signInBtn {
+					width: 90px;
+					padding: 0.3em;
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+}
+
+// Optional: for mid-sized tablets
+@include respond-to(481px) {
+	.navbar {
+		.navbar-item {
+			.nav-links {
+				&.desktop-only {
+					display: none;
+				}
+			}
+
+			.navbar-buttons {
+				width: 20%;
+				.nav-icon {
+					display: none;
+				}
+
+				.signInBtn {
+					width: 100px;
+				}
+			}
+		}
+	}
+}
+
+// Hide desktop nav in mobile
+@include respond-to(768px) {
+	.nav-links.desktop-only {
+		display: none;
+	}
+
+	.navbar-item {
+		.navbar-buttons {
+			width: 40%;
+
+			.hamburger-icon {
+				display: block;
+			}
+
+			.nav-icon {
+				display: none;
+			}
+
+			.signInBtn {
+				width: 100px;
+				border-radius: 20px;
+				padding: 0.35em;
+			}
+		}
+	}
+}
+
+@include respond-to(980px){
+  .navbar{
+    .navbar-item{
+      .nav-links.desktop-only{
+        display: flex;
+      }
+      .navbar-buttons{
+        .nav-icon{
+          display: block;
+        }
+      }
+    }
+  }
+}

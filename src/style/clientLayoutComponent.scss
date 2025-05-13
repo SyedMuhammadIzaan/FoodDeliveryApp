@@ -1,0 +1,179 @@
+@import "./abstract/mixins/media.scss";
+.herobanner-wrapper {
+	// border: 1px solid black;
+	font-size: 16px;
+	padding: 0em 2.8em 1em 2.8em;
+	box-sizing: border-box;
+
+	.herobanner-content {
+		border: 2px solid black;
+		border-radius: 10px;
+		height: 65vh;
+		position: relative;
+		
+		.herobanner-title{
+			position: absolute;
+			h2{
+				margin: 0em;
+			}
+		}
+		.herobanner-desc{
+			position: absolute;
+			
+		}
+		
+	}
+}
+
+@include respond-between(480px,320px){
+	.herobanner-wrapper{
+		font-size: 14px;
+
+		.herobanner-content{
+			.herobanner-title{
+				// border: 2px solid red;
+				height: 85px;
+				top: 7em;
+				left: 0.5em;
+				h2{
+					font-size: 1.1em;
+				}
+			}
+			.herobanner-desc{
+				top: 12.4em;
+				left: 0.5em;
+				// border: 2px solid blue;
+				line-height: 1.2;
+				span{
+					font-size: 0.75em;
+					padding: 0em;
+				}
+			}
+		}
+	}
+}
+
+@include respond-to(481px){
+	.herobanner-wrapper{
+		font-size: 14px;
+
+		.herobanner-content{
+			.herobanner-title{
+				// border: 2px solid red;
+				height: 75px;
+				width: 60%;
+				box-sizing: border-box;
+				top: 7em;
+				left: 1.5em;
+				line-height: 1.2;
+				h2{
+					font-size: 1.8em;
+				}
+			}
+			.herobanner-desc{
+				// border: 2px solid blue;
+				top: 12.4em;
+				width: 60%;
+				left: 1.5em;
+				line-height: 1.2;
+				span{
+					font-size: 0.85em;
+				}
+
+			}
+		}
+	}
+}
+
+@include respond-to(799px){
+	.herobanner-wrapper{
+		font-size: 16px;
+
+		.herobanner-content{
+			.herobanner-title{
+				// border: 2px solid red;
+				height: 65px;
+				width: 400px;
+				box-sizing: border-box;
+				top: 8em;
+				left: 1.5em;
+				line-height: 1.2;
+				h2{
+					font-size: 1.9em;
+				}
+			}
+			.herobanner-desc{
+				// border: 2px solid blue;
+				top: 12.4em;
+				width: 400px;
+				left: 1.5em;
+				line-height: 1.2;
+				span{
+					font-size: 0.85em;
+				}
+
+			}
+		}
+	}
+}
+
+@include respond-to(979px){
+	.herobanner-wrapper{
+		font-size: 16px;
+		.herobanner-content{
+			.herobanner-title{
+				height: 65px;
+				width: 400px;
+				box-sizing: border-box;
+				top: 8em;
+				left: 1.5em;
+				line-height: 1.2;
+				h2{
+					font-size: 1.9em;
+				}
+			}
+			.herobanner-desc{
+				top: 12.4em;
+				width: 400px;
+				left: 1.5em;
+				line-height: 1.2;
+				span{
+					font-size: 0.85em;
+				}
+
+			}
+		}
+	}
+}
+
+
+@include respond-to(1024px){
+	.herobanner-wrapper{
+		font-size: 16px;
+		.herobanner-content{
+			.herobanner-title{
+				// border: 2px solid red;
+				height: 65px;
+				width: 500px;
+				box-sizing: border-box;
+				top: 8.2em;
+				left: 1.5em;
+				line-height: 1.2;
+				h2{
+					font-size: 2.2em;
+				}
+			}
+			.herobanner-desc{
+				// border: 2px solid blue;
+				top: 13.5em;
+				width: 500px;
+				left: 1.5em;
+				line-height: 1.2;
+				span{
+					font-size: 1em;
+				}
+
+			}
+		}
+	}
+}
