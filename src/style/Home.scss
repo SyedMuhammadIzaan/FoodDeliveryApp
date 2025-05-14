@@ -1,98 +1,114 @@
 @import "../style/abstract/mixins/media.scss";
 
-.explore-wrapper{
-    // border: 2px solid red;
-    font-size: 16px;
-    padding: 0em 2.8em 1em 2.8em;
-    box-sizing: border-box;
-    .explore-wrapper-content{
-        // border: 2px solid black;
+.explore-wrapper {
+	// border: 2px solid red;
+	font-size: 16px;
+	padding: 0em 2.8em 1em 2.8em;
+	box-sizing: border-box;
+	.explore-wrapper-content {
+		// border: 2px solid black;
 
-        h3{
-            margin-bottom: 0em;
-            padding-bottom: 0em;
-            margin-top: -2em;
-        }
+		h3 {
+			margin-bottom: 0em;
+			padding-bottom: 0em;
+			margin-top: -2em;
+		}
 
-        p{
-            padding-bottom: 0em;
-            margin-bottom: -1em;
-            margin-top: -5em;
-        }
-    }
+		p {
+			padding-bottom: 0em;
+			margin-bottom: -1em;
+			margin-top: -5em;
+			// line-height: 1.4;
+		}
+	}
+}
+.food-categories-wrapper {
+	padding: 0em 2.8em 1em 2.8em;
+	box-sizing: border-box;
+	font-size: 16px;
+
+	.food-category-row {
+		// border: 1px solid black;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		padding: 1em 0em 0em 0em;
+		box-sizing: border-box;
+		overflow-x: auto;
+		overflow-y: hidden;
+		gap: 1.5em;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE/Edge */
+		height: auto;
+
+		&::-webkit-scrollbar {
+			display: none; /* Chrome/Safari */
+		}
+
+		.food-category-content {
+			flex: 0 0 auto; /* Prevent shrinking and enable scroll */
+			min-width: 100px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			height: 100%;
+
+			.category-img {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 2px solid grey;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+
+			h6 {
+				margin-top: -2em;
+				margin-bottom: 0em;
+				font-size: 14px;
+			}
+		}
+	}
 }
 
-.food-categories-wrapper{
-    // border:2px solid red;
-    font-size: 16px;
-    padding: 0em 2.8em 1em 2.8em;
-    box-sizing: border-box;
-
-    .food-category-row{
-        border: 2px solid black;
-        padding: 1em;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        gap:2em;
-        height:25vh;
-
-        .food-category-content{
-            // border: 2px solid red;
-            // height:100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 100px;
-            .category-img{
-                border:2px solid grey;
-                width:80px;
-                height: 80px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                img{
-                    width: 90%;
-                    height: 90%;
-                    border-radius: 50%;
-                    object-fit: cover;
-
-                }
-            }
-            h6{
-                margin-top: -3.8em;
-            }
-        }
-    }
+.food-items-section{
+	// border:2px solid grey;
+	padding: 0em 2.8em 1em 2.8em;
+	box-sizing: border-box;
+	height: auto;
+	min-height: 100vh;
 }
 
-
-@include respond-between(480px,320px){
-    .explore-wrapper{
-        font-size: 14px;
-    }
+@include respond-between(480px, 320px) {
+	.explore-wrapper {
+		font-size: 14px;
+	}
 }
 
-@include respond-to(481px){
-    .explore-wrapper{
-        font-size: 14px;
-    }
+@include respond-to(481px) {
+	.explore-wrapper {
+		font-size: 14px;
+	}
 }
 
-@include respond-to(768px){
-    .explore-wrapper{
-        font-size: 16px;
-    }
+@include respond-to(768px) {
+	.explore-wrapper {
+		font-size: 16px;
+	}
 }
 
-@include respond-to(980px){
-    .explore-wrapper{
-        font-size: 16px;
-    }
+@include respond-to(980px) {
+	.explore-wrapper {
+		font-size: 16px;
+	}
 }

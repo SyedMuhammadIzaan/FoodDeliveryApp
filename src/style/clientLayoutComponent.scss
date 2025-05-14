@@ -25,6 +25,17 @@
 	}
 }
 
+.item-wrapper{
+	// border: 2px solid blue;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 25px;
+}
+
 @include respond-between(480px,320px){
 	.herobanner-wrapper{
 		font-size: 14px;

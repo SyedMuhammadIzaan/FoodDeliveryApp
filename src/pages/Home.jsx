@@ -3,7 +3,7 @@ import Herobanner from "../components/Herobanner";
 
 import "../style/Home.scss";
 import { foodCategory } from "../constant";
-import Card from "../components/Card";
+import CardComp from "../components/Card";
 const Home = () => {
 	return (
 		<div>
@@ -23,7 +23,7 @@ const Home = () => {
 			<section className="food-categories-wrapper">
 				<div className="food-category-row">
 					{foodCategory.map((categories, indx) => {
-						console.log("Categories", categories);
+						// console.log("Categories", categories);
 						return (
 							<div className="food-category-content" key={indx}>
 								<div className="category-img">
@@ -40,7 +40,7 @@ const Home = () => {
 				</div>
 			</section>
 			<section className="food-items-section">
-				<Card />
+				<CardComp />
 			</section>
 		</div>
 	);
