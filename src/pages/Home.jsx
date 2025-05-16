@@ -1,10 +1,16 @@
-import React from "react";
+import { useState } from "react";
 import Herobanner from "../components/Herobanner";
-
-import "../style/Home.scss";
 import { foodCategory } from "../constant";
 import CardComp from "../components/Card";
+import "../style/Home.scss";
+
 const Home = () => {
+	const [displayItem,setDisplayItem]=useState("All");
+
+	const handleItem=(name)=>{
+		setDisplayItem(name)
+	}
+	console.log("DisplayItem",displayItem)
 	return (
 		<div>
 			<section>
@@ -30,6 +36,7 @@ const Home = () => {
 									<img
 										src={categories.imgSrc}
 										alt={categories.name}
+										onClick={()=>{handleItem(categories.name)}}
 										srcset=""
 									/>
 								</div>
@@ -40,7 +47,7 @@ const Home = () => {
 				</div>
 			</section>
 			<section className="food-items-section">
-				<CardComp />
+				<CardComp item={displayItem} />
 			</section>
 		</div>
 	);

@@ -1,4 +1,5 @@
 @import "./abstract/mixins/media.scss";
+
 .herobanner-wrapper {
 	// border: 1px solid black;
 	font-size: 16px;
@@ -10,22 +11,20 @@
 		border-radius: 10px;
 		height: 65vh;
 		position: relative;
-		
-		.herobanner-title{
+
+		.herobanner-title {
 			position: absolute;
-			h2{
+			h2 {
 				margin: 0em;
 			}
 		}
-		.herobanner-desc{
+		.herobanner-desc {
 			position: absolute;
-			
 		}
-		
 	}
 }
 
-.item-wrapper{
+.item-wrapper {
 	// border: 2px solid blue;
 	height: 100%;
 	width: 100%;
@@ -34,42 +33,231 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	gap: 25px;
+	font-size: 16px;
+	.ant-card-body {
+		padding: 4px !important;
+
+		.item-content {
+			.item-header {
+				// border: 2px solid red;
+				font-size: 0.78em;
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
 }
 
-@include respond-between(480px,320px){
-	.herobanner-wrapper{
+.footer-wrapper {
+	// border: 2px solid green;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 16px;
+	.footer-header-wrapper {
+		// border: 2px solid black;
+		width: 60%;
+
+		.app-details {
+			.appLogo {
+				h5 {
+					font-size: 1.8em;
+					margin-bottom: 0em;
+					margin-top: 1em;
+				}
+			}
+			.app-desc {
+				width: 100%;
+
+				p {
+					font-size: 0.85em;
+				}
+			}
+			.social-links {
+				display: flex;
+				width: 30%;
+				justify-content: space-evenly;
+				gap: 1em;
+				.facebook-icon {
+					border: 2px solid white;
+					border-radius: 50%;
+					box-sizing: border-box;
+					padding: 0.6em;
+
+					&:hover {
+						color: rgb(236, 231, 231);
+						border: 2px solid rgb(236, 231, 231);
+						transition: all 0.5s ease-in-out;
+					}
+				}
+				.instagram-icon {
+					border: 2px solid white;
+					border-radius: 50%;
+					box-sizing: border-box;
+					padding: 0.6em;
+
+					&:hover {
+						color: rgb(236, 231, 231);
+						border: 2px solid rgb(236, 231, 231);
+						transition: all 0.5s ease-in-out;
+					}
+				}
+				.twitter-icon {
+					border: 2px solid white;
+					border-radius: 50%;
+					box-sizing: border-box;
+					padding: 0.6em;
+
+					&:hover {
+						color: rgb(236, 231, 231);
+						border: 2px solid rgb(236, 231, 231);
+						transition: all 0.5s ease-in-out;
+					}
+				}
+			}
+		}
+	}
+	.footer-nav-wrapper {
+		// border: 2px solid black;
+		width: 40%;
+		color: white;
+
+		.company-heading {
+			h5 {
+				font-size: 1.2em;
+				margin-bottom: 0.75em;
+			}
+		}
+		.nav-links {
+			// border: 2px solid red;
+			display: flex;
+			flex-direction: column;
+			gap: 0.4em;
+			a {
+				color: white;
+				font-size: 0.85em;
+			}
+		}
+	}
+	.footer-getintouch-wrapper {
+		// border: 2px solid black;
+		width: 40%;
+
+		.getintouch-heading {
+			h5 {
+				font-size: 1.2em;
+				margin-bottom: 0em;
+			}
+		}
+		.contact-info {
+			p {
+				font-size: 0.85em;
+			}
+		}
+	}
+}
+
+@include respond-between(480px, 320px) {
+	.herobanner-wrapper {
 		font-size: 14px;
 
-		.herobanner-content{
-			.herobanner-title{
+		.herobanner-content {
+			.herobanner-title {
 				// border: 2px solid red;
 				height: 85px;
 				top: 7em;
 				left: 0.5em;
-				h2{
+				h2 {
 					font-size: 1.1em;
 				}
 			}
-			.herobanner-desc{
+			.herobanner-desc {
 				top: 12.4em;
 				left: 0.5em;
 				// border: 2px solid blue;
 				line-height: 1.2;
-				span{
+				span {
 					font-size: 0.75em;
 					padding: 0em;
 				}
 			}
 		}
 	}
+	.ant-layout-footer {
+		padding: 10px !important;
+	}
+	.footer-wrapper {
+		font-size: 16px;
+		gap: 0.38em;
+		.footer-header-wrapper {
+			// border: 2px solid red;
+			width: 50%;
+
+			.app-details {
+				.appLogo {
+					h5 {
+						margin-top: 1.2em;
+						font-size: 1em;
+					}
+				}
+				.app-desc {
+					p {
+						font-size: 0.65em;
+					}
+				}
+				.social-links {
+					gap: 0.2em;
+					.facebook-icon {
+						border: none;
+					}
+					.instagram-icon {
+						border: none;
+					}
+					.twitter-icon {
+						border: none;
+					}
+				}
+			}
+		}
+		.footer-nav-wrapper {
+			// border: 2px solid red;
+			width: 40%;
+
+			.company-heading {
+				h5 {
+					font-size: 0.75em;
+				}
+			}
+			.nav-links {
+				a {
+					font-size: 0.6em;
+				}
+			}
+		}
+		.footer-getintouch-wrapper {
+			// border: 2px solid red;
+			width: 40%;
+
+			.getintouch-heading {
+				h5 {
+					font-size: 0.75em;
+				}
+			}
+			.contact-info {
+				p {
+					font-size: 0.6em;
+				}
+			}
+		}
+	}
 }
 
-@include respond-to(481px){
-	.herobanner-wrapper{
+@include respond-to(481px) {
+	.herobanner-wrapper {
 		font-size: 14px;
 
-		.herobanner-content{
-			.herobanner-title{
+		.herobanner-content {
+			.herobanner-title {
 				// border: 2px solid red;
 				height: 75px;
 				width: 60%;
@@ -77,31 +265,98 @@
 				top: 7em;
 				left: 1.5em;
 				line-height: 1.2;
-				h2{
+				h2 {
 					font-size: 1.8em;
 				}
 			}
-			.herobanner-desc{
+			.herobanner-desc {
 				// border: 2px solid blue;
 				top: 12.4em;
 				width: 60%;
 				left: 1.5em;
 				line-height: 1.2;
-				span{
+				span {
 					font-size: 0.85em;
 				}
+			}
+		}
+	}
 
+	.ant-layout-footer {
+		padding: 15px !important;
+	}
+	.footer-wrapper {
+		// border: 2px solid black;
+		font-size: 16px;
+		gap: 1em;
+		.footer-header-wrapper {
+			// border: 2px solid red;
+			width: 50%;
+
+			.app-details {
+				.appLogo {
+					h5 {
+						margin-top: 1.2em;
+						font-size: 1.1em;
+					}
+				}
+				.app-desc {
+					p {
+						font-size: 0.68em;
+					}
+				}
+				.social-links {
+					.facebook-icon {
+						padding: 0.4em;
+					}
+					.instagram-icon {
+						padding: 0.4em;
+					}
+					.twitter-icon {
+						padding: 0.4em;
+					}
+				}
+			}
+		}
+		.footer-nav-wrapper {
+			// border: 2px solid red;
+			width: 40%;
+
+			.company-heading {
+				h5 {
+					font-size: 0.8em;
+				}
+			}
+			.nav-links {
+				a {
+					font-size: 0.7em;
+				}
+			}
+		}
+		.footer-getintouch-wrapper {
+			// border: 2px solid red;
+			width: 40%;
+
+			.getintouch-heading {
+				h5 {
+					font-size: 0.8em;
+				}
+			}
+			.contact-info {
+				p {
+					font-size: 0.65em;
+				}
 			}
 		}
 	}
 }
 
-@include respond-to(799px){
-	.herobanner-wrapper{
+@include respond-to(799px) {
+	.herobanner-wrapper {
 		font-size: 16px;
 
-		.herobanner-content{
-			.herobanner-title{
+		.herobanner-content {
+			.herobanner-title {
 				// border: 2px solid red;
 				height: 65px;
 				width: 400px;
@@ -109,60 +364,119 @@
 				top: 8em;
 				left: 1.5em;
 				line-height: 1.2;
-				h2{
+				h2 {
 					font-size: 1.9em;
 				}
 			}
-			.herobanner-desc{
+			.herobanner-desc {
 				// border: 2px solid blue;
 				top: 12.4em;
 				width: 400px;
 				left: 1.5em;
 				line-height: 1.2;
-				span{
+				span {
 					font-size: 0.85em;
 				}
+			}
+		}
+	}
+	.ant-layout-footer {
+		padding: 15px !important;
+	}
+	.footer-wrapper {
+		font-size: 16px;
+		.footer-header-wrapper {
+			// border: 2px solid red;
+			width: 50%;
 
+			.app-details {
+				.appLogo {
+					h5 {
+						margin-top: 1.2em;
+						font-size: 1.5em;
+					}
+				}
+				.app-desc {
+					p {
+						font-size: 0.8em;
+					}
+				}
+				.social-links {
+					gap: 1em;
+					.facebook-icon {
+						box-sizing: border-box;
+						// border-radius: 80px;
+						padding: 0.5em;
+					}
+				}
+			}
+		}
+		.footer-nav-wrapper {
+			// border: 2px solid red;
+			width: 40%;
+
+			.company-heading {
+				h5 {
+					font-size: 1.2em;
+				}
+			}
+			.nav-links {
+				a {
+					font-size: 0.8em;
+				}
+			}
+		}
+		.footer-getintouch-wrapper {
+			// border: 2px solid red;
+			width: 40%;
+
+			.getintouch-heading {
+				h5 {
+					font-size: 1.2em;
+				}
+			}
+			.contact-info {
+				p {
+					font-size: 0.8em;
+				}
 			}
 		}
 	}
 }
 
-@include respond-to(979px){
-	.herobanner-wrapper{
+@include respond-to(979px) {
+	.herobanner-wrapper {
 		font-size: 16px;
-		.herobanner-content{
-			.herobanner-title{
+		.herobanner-content {
+			.herobanner-title {
 				height: 65px;
 				width: 400px;
 				box-sizing: border-box;
 				top: 8em;
 				left: 1.5em;
 				line-height: 1.2;
-				h2{
+				h2 {
 					font-size: 1.9em;
 				}
 			}
-			.herobanner-desc{
+			.herobanner-desc {
 				top: 12.4em;
 				width: 400px;
 				left: 1.5em;
 				line-height: 1.2;
-				span{
+				span {
 					font-size: 0.85em;
 				}
-
 			}
 		}
 	}
 }
 
-
-@include respond-to(1024px){
-	.herobanner-wrapper{
+@include respond-to(1024px) {
+	.herobanner-wrapper {
 		font-size: 16px;
-		.herobanner-content{
-			.herobanner-title{
+		.herobanner-content {
+			.herobanner-title {
 				// border: 2px solid red;
 				height: 65px;
 				width: 500px;
@@ -170,21 +484,23 @@
 				top: 8.2em;
 				left: 1.5em;
 				line-height: 1.2;
-				h2{
-					font-size: 2.2em;
+				h2 {
+					font-size: 2.5em;
 				}
 			}
-			.herobanner-desc{
+			.herobanner-desc {
 				// border: 2px solid blue;
-				top: 13.5em;
+				top: 14.5em;
 				width: 500px;
 				left: 1.5em;
 				line-height: 1.2;
-				span{
+				span {
 					font-size: 1em;
 				}
-
 			}
 		}
+	}
+	.ant-layout-footer{
+		padding: 30px !important;
 	}
 }

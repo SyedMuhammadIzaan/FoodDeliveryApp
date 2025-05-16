@@ -39,13 +39,14 @@
 			.signInBtn {
 				width: 90px;
 				border-radius: 15px;
+				background-color: #fff;
 				padding: 0.3em;
 				box-sizing: border-box;
 				cursor: pointer;
 
 				&:hover {
 					background-color: rgb(245, 145, 145);
-					border: 2px solid rgb(253, 89, 89);
+					border: 2px solid rgb(253, 136, 136);
 					color: white;
 					transition: all 0.5s ease-in-out;
 				}

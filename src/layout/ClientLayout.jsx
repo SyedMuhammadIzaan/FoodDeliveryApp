@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
+import FooterComp from "../components/Footer";
 const { Header, Footer, Sider, Content } = Layout;
 
 const layoutStyle = {
@@ -30,7 +31,9 @@ const headerStyle = {
   
 const footerStyle = {
     color: '#fff',
-    backgroundColor: '#4096ff',
+    width:"100vw",
+    backgroundColor: 'grey',
+    // padding:"20px"
   };
 
 const ClientLayout = () => {
@@ -39,7 +42,7 @@ const ClientLayout = () => {
 			<Layout style={layoutStyle}>
 				<Header style={headerStyle}><Navbar /></Header>
 				<Content style={contentStyle}><Outlet /></Content>
-				<Footer style={footerStyle}>Footer</Footer>
+				<Footer style={footerStyle}><FooterComp /></Footer>
 			</Layout>
 		</div>
 	);
