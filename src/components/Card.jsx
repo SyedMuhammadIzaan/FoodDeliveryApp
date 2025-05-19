@@ -4,11 +4,11 @@ import { foodItem } from "../constant";
 import "../style/clientLayoutComponent.scss";
 
 const CardComp = ({ item }) => {
-	console.log("Card Item", item);
+	// console.log("Card Item", item);
 	const filterItemOfCard = foodItem.filter((element) => {
 		return element.category === item;
 	});
-	console.log("Filter Item ", filterItemOfCard);
+	// console.log("Filter Item ", filterItemOfCard);
 	return (
 		<div className="item-wrapper">
 			{item === "All"

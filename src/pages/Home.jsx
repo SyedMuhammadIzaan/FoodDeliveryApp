@@ -5,12 +5,11 @@ import CardComp from "../components/Card";
 import "../style/Home.scss";
 
 const Home = () => {
-	const [displayItem,setDisplayItem]=useState("All");
+	const [displayItem, setDisplayItem] = useState("All");
 
-	const handleItem=(name)=>{
-		setDisplayItem(name)
-	}
-	console.log("DisplayItem",displayItem)
+	const handleItem = (name) => {
+		setDisplayItem(name);
+	};
 	return (
 		<div>
 			<section>
@@ -36,7 +35,9 @@ const Home = () => {
 									<img
 										src={categories.imgSrc}
 										alt={categories.name}
-										onClick={()=>{handleItem(categories.name)}}
+										onClick={() => {
+											handleItem(categories.name);
+										}}
 										srcset=""
 									/>
 								</div>
