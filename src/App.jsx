@@ -3,8 +3,9 @@ import ClientLayout from "./layout/clientLayout";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import ContactUs from "./pages/ContactUs";
-import NotFound from "./pages/NotFound"
-import AdminLayout from "./admin/layout/AdminLayout" 
+import AddToCart from "./components/AddToCart.jsx";
+import NotFound from "./pages/NotFound";
+import AdminLayout from "./admin/layout/AdminLayout";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="menu" element={<Menu />} />
         <Route path="contact-us" element={<ContactUs />} />
+        <Route path="add-to-cart" element={<AddToCart />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 

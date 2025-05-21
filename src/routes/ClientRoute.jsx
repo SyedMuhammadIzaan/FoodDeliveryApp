@@ -4,6 +4,7 @@ import ClientLayout from "../layout/clientLayout";
 import Home from "../pages/Home";
 import Menu from "../pages/Menu";
 import ContactUs from "../pages/ContactUs";
+import AddToCart from "../components/AddToCart";
 
 const ClientRoute = () => {
 	return (
@@ -13,6 +14,7 @@ const ClientRoute = () => {
 					<Route index element={<Home />} />
 					<Route path="menu" element={<Menu />} />
 					<Route path="contact-us" element={<ContactUs />} />
+					<Route path="add-to-cart" element={<AddToCart />} />
 				</Route>
 			</Routes>
 		</div>

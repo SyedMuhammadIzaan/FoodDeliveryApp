@@ -3,17 +3,22 @@ import { IoSearchOutline } from "react-icons/io5";
 import { FaShoppingBasket } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import { NavLink,useNavigate } from 'react-router-dom';
 import "../style/Navbar.scss";
-import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate=useNavigate()
 
   const toggleMenu = () => {
     setMenuOpen(true);
   };
   const handleCloseMenu= () => {
     setMenuOpen(false);
+  }
+
+  const handleNavigate=()=>{
+    navigate('add-to-cart')
   }
 
   return (
@@ -30,7 +35,7 @@ const Navbar = () => {
 
         <div className="navbar-buttons">
           <IoSearchOutline className="nav-icon" size={20} />
-          <FaShoppingBasket className="nav-icon" size={20} />
+          <FaShoppingBasket onClick={handleNavigate} className="nav-icon" size={20} />
           <button className='signInBtn'>Sign In</button>
           <RxHamburgerMenu
             className='hamburger-icon'
