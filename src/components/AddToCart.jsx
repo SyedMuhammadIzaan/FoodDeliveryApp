@@ -1,6 +1,9 @@
 import { MdDeleteOutline } from "react-icons/md";
+import { Input } from "antd";
+import TotalBill from "./TotalBill";
 import BBQPastaImg from "../assets/bbq-pasta_img.webp";
 import "../style/clientLayoutComponent.scss";
+import ButtonComp from "./ButtonComp";
 const AddToCart = () => {
 	return (
 		<div className="add-to-cart-wrapper">
@@ -24,8 +27,8 @@ const AddToCart = () => {
 								<p>Total</p>
 							</div>
 							<div>
-                <p>Remove</p>
-              </div>
+								<p>Remove</p>
+							</div>
 						</div>
 						<div className="booked-items">
 							<div className="display-items">
@@ -71,7 +74,23 @@ const AddToCart = () => {
 						</div>
 					</div>
 				</div>
-				<div className="cart-items-row"></div>
+				<div className="cart-items-row">
+					<div className="cart-summary-section">
+						<div className="billing-action-wrapper">
+							<TotalBill />
+							<div className="billing-action-btn-wrapper">
+								<ButtonComp text="Proceed to Checkout" />
+							</div>
+						</div>
+						<div className="promo-code-section">
+							<h4>If You have a promo code. Enter it here</h4>
+							<div className="promo-code-input-group">
+								<Input placeholder="Promo Code" />
+								<ButtonComp text="Submit" />
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
