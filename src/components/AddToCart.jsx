@@ -86,7 +86,7 @@ const AddToCart = () => {
 							<h4>If You have a promo code. Enter it here</h4>
 							<div className="promo-code-input-group">
 								<Input placeholder="Promo Code" />
-								<ButtonComp redirectTo="/delivery-info" text="Submit" />
+								<ButtonComp redirectTo={"/add-to-cart/delivery-info"} text="Submit" />
 							</div>
 						</div>
 					</div>
