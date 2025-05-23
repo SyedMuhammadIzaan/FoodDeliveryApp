@@ -164,7 +164,6 @@
 	}
 }
 
-
 .footer-wrapper {
 	// border: 2px solid green;
 	display: flex;
@@ -307,7 +306,7 @@
 				}
 				.booked-items {
 					// border: 2px solid purple;
-					margin:1em 0em 1em 0em;
+					margin: 1em 0em 1em 0em;
 
 					.display-items {
 						// border: 2px solid yellow;
@@ -327,7 +326,7 @@
 							img {
 								width: 100%;
 								height: 100%;
-								border-radius:5px;
+								border-radius: 5px;
 							}
 						}
 						.item {
@@ -1261,6 +1260,41 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+@include respond-to(1400px) {
+	.cart-summary-section {
+		justify-content: space-between;
+		.billing-action-wrapper {
+			// border: 2px solid red;
+			width: 40%;
+			.total-bill-wrapper {
+				width: 80%;
+				// .bill-content {
+				// 	.bill-title {
+				// 	}
+				// 	.bill-details {
+				// 		.bill-row {
+				// 		}
+				// 		.bill-row-total {
+				// 		}
+				// 	}
+				// }
+			}
+			.billing-action-btn-wrapper {
+				// border: 2px solid red;
+				margin-top: 0.4em;
+				height: 10vh;
+				display: flex;
+				.ant-btn {
+					width: 50%;
+				}
+			}
+		}
+		.promo-code-section {
+			width: 50%;
 		}
 	}
 }
