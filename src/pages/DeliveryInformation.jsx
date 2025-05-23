@@ -1,3 +1,4 @@
+import ButtonComp from "../components/ButtonComp"
 import TotalBill from "../components/TotalBill"
 import "../style/clientLayoutComponent.scss"
 const DeliveryInformation = () => {
@@ -20,7 +21,7 @@ const DeliveryInformation = () => {
                 <div className="total-bill">
                     <TotalBill />
                     <div className="proceed-to-payment-btn">
-                        
+                        <ButtonComp />
                     </div>
                 </div>
             </div>
