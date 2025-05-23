@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import ContactUs from "./pages/ContactUs";
 import AddToCart from "./components/AddToCart.jsx";
+import DeliveryInformation from "./pages/DeliveryInformation.jsx";
 import NotFound from "./pages/NotFound";
 import AdminLayout from "./admin/layout/AdminLayout";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="menu" element={<Menu />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="add-to-cart" element={<AddToCart />} />
+        <Route path="add-to-cart/delivery-info" element={<DeliveryInformation />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 

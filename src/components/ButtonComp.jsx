@@ -1,10 +1,16 @@
 import { Button } from 'antd'
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const ButtonComp = ({text}) => {
+const ButtonComp = ({text,redirectTo}) => {
+    console.log("Redirect",redirectTo)
+    const navigate=useNavigate();
+
+    const handleNavigate=()=>{
+        navigate(redirectTo);
+    }
   return (
     <>
-    <Button>{text}</Button>
+    <Button onClick={()=>{handleNavigate}}>{text}</Button>
     </>
   )
 }
