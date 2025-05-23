@@ -10,6 +10,7 @@
 	.delivery-info-row {
 		width: 100%;
 		box-sizing: border-box;
+        padding: 1em;
 
 		.delivery-info-col {
 			width: 100%;
@@ -380,9 +381,6 @@
 				}
 				.total-bill {
 					width: 100%;
-
-					.proceed-to-payment-btn {
-					}
 				}
 			}
 		}
