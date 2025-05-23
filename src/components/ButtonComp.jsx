@@ -10,7 +10,7 @@ const ButtonComp = ({text,redirectTo}) => {
     }
   return (
     <>
-    <Button onClick={()=>{handleNavigate}}>{text}</Button>
+    <Button onClick={handleNavigate}>{text}</Button>
     </>
   )
 }
