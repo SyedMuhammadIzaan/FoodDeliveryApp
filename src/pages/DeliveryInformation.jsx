@@ -1,6 +1,8 @@
-import ButtonComp from "../components/ButtonComp"
-import TotalBill from "../components/TotalBill"
-import "../style/clientLayoutComponent.scss"
+import { Input, InputNumber } from "antd";
+import ButtonComp from "../components/ButtonComp";
+import TotalBill from "../components/TotalBill";
+import "../style/pages/DeliveryInformation.scss";
+
 const DeliveryInformation = () => {
   return (
     <div className="delivery-info-wrapper">
@@ -9,13 +11,28 @@ const DeliveryInformation = () => {
             <div className="delivery-info-col">
                 <div className="delivery-info-field">
                     <div className="name-fields">
-                        <div className="firstname-field"></div>
-                        <div className="lastname-field"></div>
+                        <div className="firstname-field">
+                            <Input placeholder="First Name" />
+                        </div>
+                        <div className="lastname-field">
+                            <Input placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div className="email-field">
+                        <Input placeholder="Email Address" />
+                    </div>
+                    <div className="street-field">
+                        <Input placeholder="Street" />
                     </div>
                     <div className="state-fields">
-
+                        <Input placeholder="City" />
+                        <Input placeholder="State" />
                     </div>
-                    div.
+                    <div className="country-fields">
+                        <InputNumber />
+                        <Input placeholder="Country" />
+                    </div>
+                    
 
                 </div>
                 <div className="total-bill">
