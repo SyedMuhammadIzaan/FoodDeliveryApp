@@ -19,6 +19,9 @@ const DeliveryInformation = () => {
                 </div>
                 <div className="total-bill">
                     <TotalBill />
+                    <div className="proceed-to-payment-btn">
+                        
+                    </div>
                 </div>
             </div>
 
