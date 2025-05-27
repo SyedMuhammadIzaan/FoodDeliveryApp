@@ -6,12 +6,11 @@ const initialState = {
 
 console.log("Initial State Orders",initialState.orders)
 export const orderSlice = createSlice({
-    name: "cart",
+    name: "order",
 	initialState,
 	reducers: {
         addOrder: (state, action) => {
             state.orders.push(action.payload);
-            console.log(state.orders)
 		},
 		removeFromCart: (state, action) => {
 			state.orders = state.orders.filter((item) => item.id !== action.payload);
