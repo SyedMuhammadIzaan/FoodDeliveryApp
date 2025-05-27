@@ -1,10 +1,9 @@
 import { MdDeleteOutline } from "react-icons/md";
 import { Input } from "antd";
 import TotalBill from "./TotalBill";
-import BBQPastaImg from "../assets/bbq-pasta_img.webp";
-import "../style/clientLayoutComponent.scss";
 import ButtonComp from "./ButtonComp";
 import { useSelector } from "react-redux";
+import "../style/clientLayoutComponent.scss";
 // import { useState } from "react";
 const AddToCart = () => {
 	// const [orders,setOrders]=useState([])
