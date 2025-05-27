@@ -5,9 +5,11 @@ import BBQPastaImg from "../assets/bbq-pasta_img.webp";
 import "../style/clientLayoutComponent.scss";
 import ButtonComp from "./ButtonComp";
 import { useSelector } from "react-redux";
+// import { useState } from "react";
 const AddToCart = () => {
-	const orders=useSelector((state)=>state.order.orders)
-	console.log("Orders",orders)
+	// const [orders,setOrders]=useState([])
+	const orders = useSelector((state) => state.order.orders);
+	console.log("Orders", orders);
 	return (
 		<div className="add-to-cart-wrapper">
 			<div className="cart-items-col">
@@ -34,46 +36,30 @@ const AddToCart = () => {
 							</div>
 						</div>
 						<div className="booked-items">
-							<div className="display-items">
-								<div className="item" id="image">
-									<img src={BBQPastaImg} alt="" />
-								</div>
-								<div className="item">
-									<p>Beef Biryani</p>
-								</div>
-								<div className="item">
-									<p>2000</p>
-								</div>
-								<div className="item">
-									<p>2</p>
-								</div>
-								<div className="item">
-									<p>1500</p>
-								</div>
-								<div className="item">
-									<MdDeleteOutline />
-								</div>
-							</div>
-							<div className="display-items">
-								<div className="item" id="image">
-									<img src={BBQPastaImg} alt="" />
-								</div>
-								<div className="item">
-									<p>Beef Biryani</p>
-								</div>
-								<div className="item">
-									<p>2000</p>
-								</div>
-								<div className="item">
-									<p>2</p>
-								</div>
-								<div className="item">
-									<p>1500</p>
-								</div>
-								<div className="item">
-									<MdDeleteOutline />
-								</div>
-							</div>
+							{orders.map((order, index) => {
+								return (
+									<div key={index} className="display-items">
+										<div className="item" id="image">
+											<img src={order.imgSrc} alt="" />
+										</div>
+										<div className="item">
+											<p>{order.name}</p>
+										</div>
+										<div className="item">
+											<p>{order.amount}</p>
+										</div>
+										<div className="item">
+											<p>2</p>
+										</div>
+										<div className="item">
+											<p>1500</p>
+										</div>
+										<div className="item">
+											<MdDeleteOutline />
+										</div>
+									</div>
+								);
+							})}
 						</div>
 					</div>
 				</div>
@@ -89,7 +75,10 @@ const AddToCart = () => {
 							<h4>If You have a promo code. Enter it here</h4>
 							<div className="promo-code-input-group">
 								<Input placeholder="Promo Code" />
-								<ButtonComp redirectTo={"/add-to-cart/delivery-info"} text="Submit" />
+								<ButtonComp
+									redirectTo={"/add-to-cart/delivery-info"}
+									text="Submit"
+								/>
 							</div>
 						</div>
 					</div>
