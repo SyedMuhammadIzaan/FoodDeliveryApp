@@ -4,7 +4,6 @@ const initialState = {
 	orders: [],
 };
 
-console.log("Initial State Orders",initialState.orders)
 export const orderSlice = createSlice({
     name: "order",
 	initialState,

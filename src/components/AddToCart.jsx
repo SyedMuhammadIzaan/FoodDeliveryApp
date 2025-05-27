@@ -4,7 +4,10 @@ import TotalBill from "./TotalBill";
 import BBQPastaImg from "../assets/bbq-pasta_img.webp";
 import "../style/clientLayoutComponent.scss";
 import ButtonComp from "./ButtonComp";
+import { useSelector } from "react-redux";
 const AddToCart = () => {
+	const orders=useSelector((state)=>state.order.orders)
+	console.log("Orders",orders)
 	return (
 		<div className="add-to-cart-wrapper">
 			<div className="cart-items-col">
