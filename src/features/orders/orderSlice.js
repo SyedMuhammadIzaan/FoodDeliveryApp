@@ -1,22 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    orders:[{}]
+	orders: [],
 };
 
-console.log("Inital State", initialState);
+console.log("Initial State Orders",initialState.orders)
 export const orderSlice = createSlice({
     name: "cart",
-    initialState,
-    reducers: {
-        addToCart: () => {},
-        removeFromCart: () => {},
-        updateCart: () => {},
-        removeAll: () => {},
-    },
+	initialState,
+	reducers: {
+        addOrder: (state, action) => {
+            state.orders.push(action.payload);
+            console.log(state.orders)
+		},
+		removeFromCart: (state, action) => {
+			state.orders = state.orders.filter((item) => item.id !== action.payload);
+		},
+		updateOrder: (state, action) => {
+			const item = state.orders.find((item) => item.id === action.payload.id);
+			if (item) Object.assign(item, action.payload);
+		},
+		removeAll: (state) => {
+			state.orders = [];
+		},
+	},
 });
 
-export const { addToCart, removeFromCart, updateCart, removeAll } =
-    orderSlice.actions;
+export const { addOrder, removeFromCart, updateOrder, removeAll } =
+	orderSlice.actions;
 
 export default orderSlice.reducer;

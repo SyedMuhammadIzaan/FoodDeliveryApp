@@ -1,13 +1,19 @@
 import { Card } from "antd";
 import { foodItem } from "../constant";
+import { useDispatch } from "react-redux";
 // const { Meta } = Card;
+import {addOrder} from "../features/orders/orderSlice.js"
 import "../style/clientLayoutComponent.scss";
 
 const CardComp = ({ item }) => {
-	// console.log("Card Item", item);
+	const dispatch=useDispatch();
 	const filterItemOfCard = foodItem.filter((element) => {
 		return element.category === item;
 	});
+	const handleAddToCart=(selectItem)=>{
+		console.log("Select Item",selectItem)
+		dispatch(addOrder(selectItem))
+	}
 	// console.log("Filter Item ", filterItemOfCard);
 	return (
 		<div className="item-wrapper">
@@ -18,6 +24,7 @@ const CardComp = ({ item }) => {
 								hoverable
 								key={index}
 								style={{ width: 248, height: 270 }}
+								onClick={()=>{handleAddToCart(item)}}
 								// style={{ width: 248, height: 250, border: "1px solid grey" }}
 								cover={
 									<img
@@ -52,6 +59,7 @@ const CardComp = ({ item }) => {
 								hoverable
 								key={index}
 								style={{ width: 248, height: 270 }}
+								onClick={()=>{handleAddToCart(item)}}
 								// style={{ width: 248, height: 250, border: "1px solid grey" }}
 								cover={
 									<img
