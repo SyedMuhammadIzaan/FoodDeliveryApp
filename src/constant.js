@@ -81,12 +81,14 @@ export const foodCategory = [
 
 export const foodItem = [
 	{
+		id:1,
 		name: "Suadish Biryani - North Nazimabad",
 		rating: 4.6,
 		peopleRated: 2000,
 		deliveryTime: "15 - 20 min",
 		category:"Biryani",
 		saveAmount: 69,
+		amount: 349.00,
 		imgSrc: SuadishBiryaniImg,
 		popular: [
 			{
@@ -96,9 +98,9 @@ export const foodItem = [
 				deliveryTime: "25 - 50 min",
 				category: "Biryani",
 				saveAmount: "from Rs. 79 with Saver",
-				amount: "Rs. 349.00",
-				halfKg: "Rs. 349.00",
-				double: "Rs. 449.00",
+				amount: 349.00,
+				halfKg: 349.00,
+				double: 449.00,
 				imgSrc: ChickenBiryaniImg,
 			},
 			{
@@ -108,9 +110,9 @@ export const foodItem = [
 				deliveryTime: "25 - 50 min",
 				category: "Biryani",
 				saveAmount: "from Rs. 79 with Saver",
-				amount: "Rs. 399.00",
-				halfKg: "Rs. 399.00",
-				double: "Rs. 449.00",
+				amount: 399.00,
+				halfKg: 399.00,
+				double: 449.00,
 				imgSrc: BeefBiryaniImg,
 			},
 			{
@@ -120,9 +122,9 @@ export const foodItem = [
 				deliveryTime: "25 - 50 min",
 				category: "Biryani",
 				saveAmount: "from Rs. 79 with Saver",
-				amount: "Rs. 319.00",
-				halfKg: "Rs. 319.00",
-				double: "Rs. 449.00",
+				amount: 319.00,
+				halfKg: 319.00,
+				double: 449.00,
 				imgSrc: ChickenPulaoImg,
 			},
 			{
@@ -132,8 +134,8 @@ export const foodItem = [
 				deliveryTime: "25 - 50 min",
 				category: "Biryani",
 				saveAmount: "from Rs. 79 with Saver",
-				amount: "Rs. 399.00",
-				halfKg: "Rs. 399.00",
+				amount: 399.00,
+				halfKg: 399.00,
 				imgSrc: BeefPulaoImg,
 			},
 			{
@@ -143,13 +145,14 @@ export const foodItem = [
 				deliveryTime: "25 - 50 min",
 				category: "Biryani",
 				saveAmount: "from Rs. 79 with Saver",
-				amount: "Rs. 399.00",
-				halfKg: "Rs. 399.00",
+				amount: 399.00,
+				halfKg: 399.00,
 				imgSrc: HyderabadiBeefPulaoImg,
 			},
 		],
 	},
 	{
+		id:2,
 		name: "Al Momin - Hyderabadi Yakhni Pulao",
 		rating: 4.7,
 		peopleRated: 1000,
@@ -190,6 +193,7 @@ export const foodItem = [
 		],
 	},
 	{
+		id:3,
 		name: "Kababjees bakers - Water Pump",
 		rating: 4.9,
 		peopleRated: 5000,
@@ -232,6 +236,7 @@ export const foodItem = [
 		],
 	},
 	{
+		id:4,
 		name: "Three Milk Cake",
         rating: 4.9,
 		peopleRated: 5500,
@@ -243,6 +248,7 @@ export const foodItem = [
 		imgSrc: ThreemilkCakeImg,
 	},
 	{
+		id:5,
 		name: "Caramel Tri - Milk",
         rating: 4.9,
 		peopleRated: 5000,
@@ -253,6 +259,7 @@ export const foodItem = [
         imgSrc: CaramelTriMilkImg,
 	},
 	{
+		id:6,
 		name: "Pistachio tri - Milk",
         rating: 4.9,
 		peopleRated: 5000,
@@ -263,6 +270,7 @@ export const foodItem = [
         imgSrc: PistachiotriMilk,
 	},
     {
+		id:7,
         name:"Plain Pasta",
         rating:3.8,
         peopleRated:1000,
@@ -274,6 +282,7 @@ export const foodItem = [
         imgSrc: PlainPastaImg,
     },
     {
+		id:8,
         name:"Chicken Pasta",
         rating:3.8,
         peopleRated:1000,
@@ -285,6 +294,7 @@ export const foodItem = [
         imgSrc: ChickenPastaImg,
     },
     {
+		id:9,
         name:"BBQ Pasta",
         rating:3.8,
         peopleRated:1000,
@@ -296,6 +306,7 @@ export const foodItem = [
         imgSrc: BBQPastaImg,
     },
     {
+		id:10,
         name:"Chatni Jumbo Roll",
         rating:3.8,
         peopleRated:1000,
@@ -307,6 +318,7 @@ export const foodItem = [
         imgSrc: ChutneyJumboRollImg,
     },
     {
+		id:11,
         name:"Mayo Jumbo Roll",
         rating:3.8,
         peopleRated:1000,
@@ -318,6 +330,7 @@ export const foodItem = [
         imgSrc: MayoJumboRollImg,
     }
     ,{
+		id:12,
         name:"Crispy Jumbo Roll",
         rating:3.8,
         peopleRated:1000,
@@ -329,6 +342,7 @@ export const foodItem = [
         imgSrc: CrispyJumboRollImg,
     },
     {
+		id:13,
         name:"Chicken Crispy Club",
         rating:3.8,
         peopleRated:1000,
@@ -340,6 +354,7 @@ export const foodItem = [
         imgSrc: ChickenCrispyClubSandwichImg,
     },
     {
+		id:14,
         name:"Club Sandwich",
         rating:3.8,
         peopleRated:1000,
@@ -351,6 +366,7 @@ export const foodItem = [
         imgSrc: ClubSandwichImg,
     },
     {
+		id:15,
         name:"Chicken Malai Boti Sandwich",
         rating:3.8,
         peopleRated:1000,
@@ -362,6 +378,7 @@ export const foodItem = [
         imgSrc: ChickenMalaiBotiSandwichImg,
     },
     {
+		id:16,
         name:"Brightfarms Spring Onion - Hari Piyaz (Pakistan) 250 g",
         amount:59.00,
         weight:250,
@@ -369,6 +386,7 @@ export const foodItem = [
         imgSrc: HariPiyazImg,
     },
     {
+		id:17,
         name:"Carrot Orange 500g",
         amount:79.00,
         weight:500,
@@ -376,6 +394,7 @@ export const foodItem = [
         imgSrc: CarrotImg,
     },
     {
+		id:18,
         name:"Lemon",
         amount:299.00,
         weight:250,

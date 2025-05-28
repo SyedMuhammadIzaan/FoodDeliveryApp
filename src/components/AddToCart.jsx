@@ -9,6 +9,11 @@ const AddToCart = () => {
 	// const [orders,setOrders]=useState([])
 	const orders = useSelector((state) => state.order.orders);
 	console.log("Orders", orders);
+
+	const subTotal=orders.reduce((sum,order)=>{
+		return sum + (order.amount * order.quantity)
+	},0)
+
 	return (
 		<div className="add-to-cart-wrapper">
 			<div className="cart-items-col">
@@ -48,10 +53,10 @@ const AddToCart = () => {
 											<p>{order.amount}</p>
 										</div>
 										<div className="item">
-											<p>2</p>
+											<p>{order.quantity}</p>
 										</div>
 										<div className="item">
-											<p>1500</p>
+											<p>{order.amount * order.quantity}</p>
 										</div>
 										<div className="item">
 											<MdDeleteOutline />
@@ -65,7 +70,7 @@ const AddToCart = () => {
 				<div className="cart-items-row">
 					<div className="cart-summary-section">
 						<div className="billing-action-wrapper">
-							<TotalBill />
+							<TotalBill subTotal={subTotal} deliveryFee={7} />
 							<div className="billing-action-btn-wrapper">
 								<ButtonComp text="Proceed to Checkout" />
 							</div>
