@@ -38,7 +38,6 @@ const Home = () => {
 										onClick={() => {
 											handleItem(categories.name);
 										}}
-										srcset=""
 									/>
 								</div>
 								<h6>{categories.name}</h6>

@@ -4,9 +4,11 @@ import TotalBill from "./TotalBill";
 import ButtonComp from "./ButtonComp";
 import { useSelector } from "react-redux";
 import "../style/clientLayoutComponent.scss";
+import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 const AddToCart = () => {
 	// const [orders,setOrders]=useState([])
+	const navigate=useNavigate()
 	const orders = useSelector((state) => state.order.orders);
 	console.log("Orders", orders);
 
@@ -79,10 +81,11 @@ const AddToCart = () => {
 							<h4>If You have a promo code. Enter it here</h4>
 							<div className="promo-code-input-group">
 								<Input placeholder="Promo Code" />
-								<ButtonComp
-									redirectTo={"/add-to-cart/delivery-info"}
+								{/* <ButtonComp
+									redirectTo={"add-to-cart/delivery-info"}
 									text="Submit"
-								/>
+								/> */}
+								<button onClick={navigate("delivery-info")}></button>
 							</div>
 						</div>
 					</div>
