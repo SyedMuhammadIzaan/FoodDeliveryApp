@@ -15,11 +15,11 @@ const PaymentMethod = () => {
         <div className="col-container">
           <div className="row-container">
             <div className='header'>
-              <div className='left-arrow-warpper'>
-                <button onClick={()=>{navigate("delivery-info")}}><GoArrowLeft /></button>
+              <div className='left-arrow-wrapper'>
+                <button onClick={()=>{navigate("delivery-info")}}><GoArrowLeft size={22} /></button>
               </div>
               <div className='course-icon'>
-                <FiDatabase />
+                <FiDatabase size={22} />
               </div>
               <div className="heading">
                 <h4>Course</h4>
@@ -33,6 +33,7 @@ const PaymentMethod = () => {
               <div className="item">
                 <div className="item-name">
                   <p>Greek Salad</p>
+                  <p>Qty</p>
                 </div>
                 <div className="item-price">
                   <span>$ 24.00</span>
@@ -44,7 +45,12 @@ const PaymentMethod = () => {
             </div>
           </div>
           <div className="row-container">
-
+            <div className="title">
+              <h4>Pay with Card</h4>
+            </div>
+            <div className="payment-form-container">
+              
+            </div>
           </div>
         </div>
     </div>
