@@ -44,7 +44,7 @@ const DeliveryInformation = () => {
 					<div className="total-bill">
 						<TotalBill />
 						<div className="proceed-to-payment-btn">
-							<ButtonComp text="Proceed to Payment" />
+							<ButtonComp redirectTo={"/payment"} text="Proceed to Payment" />
 						</div>
 					</div>
 				</div>

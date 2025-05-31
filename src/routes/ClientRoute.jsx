@@ -6,6 +6,7 @@ import Menu from "../pages/Menu";
 import ContactUs from "../pages/ContactUs";
 import AddToCart from "../components/AddToCart";
 import DeliveryInformation from "../pages/DeliveryInformation";
+import PaymentMethod from "../pages/paymentMethod";
 
 const ClientRoute = () => {
 	return (
@@ -15,7 +16,8 @@ const ClientRoute = () => {
 				<Route path="menu" element={<Menu />} />
 				<Route path="contact-us" element={<ContactUs />} />
 				<Route path="add-to-cart" element={<AddToCart />} />
-				<Route path="delivery-info" element={<DeliveryInformation />} />
+				<Route path="add-to-cart/delivery-info" element={<DeliveryInformation />} />
+				<Route path="payment" element={<PaymentMethod />} />
 			</Route>
 		</>
 	);

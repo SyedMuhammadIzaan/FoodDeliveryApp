@@ -1,0 +1,210 @@
+@import "../abstract/mixins/media.scss";
+
+.paymentMethod-wrapper {
+	border: 2px solid red;
+	font-size: 16px;
+	padding: 3em;
+	box-sizing: border-box;
+	.col-container {
+		border: 2px solid green;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: auto;
+		min-height: 100vh;
+
+		.row-container {
+			// border: 2px solid orange;
+			width: 50%;
+
+			.header {
+				width: 30%;
+				height: 10vh;
+				border: 2px solid brown;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				align-items: center;
+			}
+			.price-container {
+				border: 2px solid yellow;
+				height: 15vh;
+				position: relative;
+
+				h4 {
+					position: absolute;
+					top: -2.5em;
+					margin: 0em;
+					// padding-top: 0em;
+				}
+				p {
+					position: absolute;
+					// margin-top: -5.5em;
+					margin-top: 0em;
+					margin-bottom: 0em;
+				}
+			}
+			// .booked-items{
+			//     border: 2px solid blue;
+			//     display: flex;
+			//     flex-direction: column;
+			//     .item{
+			//         display: flex;
+			//         justify-content: space-between;
+			//         align-items: center;
+			//         height: 5vh;
+			//         // min-height: 60px;
+			//         // padding: 1em 0;
+
+			//         .item-price{
+			//             border: 2px solid pink;
+			//             display: flex;
+			//             flex-direction: column;
+			//             align-items: center;
+			//             // justify-content: space-between;
+			//             height: 100%;
+
+			//             // p{
+			//             //     padding-top: 0em;
+			//             //     margin: 0em;
+			//             // }
+			//         }
+			//     }
+			// }
+			.booked-items {
+				border: 2px solid blue;
+				display: flex;
+				flex-direction: column;
+
+				.item {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start; // Align to top
+					padding: 0.5em 0;
+					min-height: 10px; // Minimum height for each item
+
+					.item-name {
+						p {
+							margin: 0;
+							line-height: 1.2; // Consistent line height
+						}
+					}
+
+					.item-price {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-end;
+						gap: 4px; // Fixed pixel gap for consistency
+						justify-content: flex-start; // Align prices to top
+
+						span {
+							margin: 0;
+							line-height: 1.2; // Match line height with item name
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond-between(550px, 320px) {
+	.paymentMethod-wrapper {
+		font-size: 16px;
+		.col-container {
+			flex-direction: column;
+			width: 100%;
+			.row-container {
+				width: 100%;
+				height: auto;
+
+				.header{
+					width: 180px;
+
+					.heading{
+
+						h4{
+							font-size: 1.5em;
+						}
+					}
+				}
+				.price-container{
+					height: 8vh;
+
+					h4{
+						font-size: 1.5em;
+					}
+					p{
+						font-size: 1.2em;
+					}
+				}
+				.booked-items{
+					.item{
+						.item-name{
+							p{
+								font-size: 1.2em;
+							}
+						}
+						.item-price{
+							span{
+								font-size:1.2em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include respond-to(551px) {
+	.paymentMethod-wrapper {
+		font-size: 16px;
+		.col-container {
+			flex-direction: column;
+			width: 100%;
+			.row-container {
+				width: 100%;
+				height: auto;
+
+				.header{
+					width: 220px;
+
+					.heading{
+
+						h4{
+							font-size: 1.8em;
+						}
+					}
+				}
+				.price-container{
+					height: 8vh;
+
+					h4{
+						font-size: 1.8em;
+					}
+					p{
+						font-size: 1.4em;
+					}
+				}
+				.booked-items{
+					.item{
+						.item-name{
+							p{
+								font-size: 1.5em;
+							}
+						}
+						.item-price{
+							span{
+								font-size:1.4em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond-to(769px){
+	
+}

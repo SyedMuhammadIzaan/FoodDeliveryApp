@@ -4,11 +4,11 @@ import TotalBill from "./TotalBill";
 import ButtonComp from "./ButtonComp";
 import { useSelector } from "react-redux";
 import "../style/clientLayoutComponent.scss";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 const AddToCart = () => {
 	// const [orders,setOrders]=useState([])
-	const navigate=useNavigate()
+	// const navigate=useNavigate()
 	const orders = useSelector((state) => state.order.orders);
 	console.log("Orders", orders);
 
@@ -74,18 +74,18 @@ const AddToCart = () => {
 						<div className="billing-action-wrapper">
 							<TotalBill subTotal={subTotal} deliveryFee={7} />
 							<div className="billing-action-btn-wrapper">
-								<ButtonComp text="Proceed to Checkout" />
+								<ButtonComp redirectTo={"delivery-info"} text="Proceed to Checkout" />
+								{/* <button onClick={navigate("delivery-info")}>Proceed to Checkout</button> */}
 							</div>
 						</div>
 						<div className="promo-code-section">
 							<h4>If You have a promo code. Enter it here</h4>
 							<div className="promo-code-input-group">
 								<Input placeholder="Promo Code" />
-								{/* <ButtonComp
-									redirectTo={"add-to-cart/delivery-info"}
+								<ButtonComp
+									// redirectTo={"delivery-info"}
 									text="Submit"
-								/> */}
-								<button onClick={navigate("delivery-info")}></button>
+								/>
 							</div>
 						</div>
 					</div>
