@@ -6,6 +6,7 @@ import { FiDatabase } from "react-icons/fi";
 import { CreditCardOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 import "../style/pages/paymentMethod.scss";
+import ButtonComp from "../components/ButtonComp";
 
 const PaymentMethod = () => {
 	const navigate = useNavigate();
@@ -44,11 +45,11 @@ const PaymentMethod = () => {
 						<div className="item">
 							<div className="item-name">
 								<p>Greek Salad</p>
-								<p>Qty</p>
+								<p className="second-child">Qty</p>
 							</div>
 							<div className="item-price">
 								<span>$ 24.00</span>
-								<span>$ 12.00</span>
+								<span className="second-child">$ 12.00</span>
 							</div>
 						</div>
 						<div className="item"></div>
@@ -112,6 +113,7 @@ const PaymentMethod = () => {
 									// Add more countries as needed
 								]}
 							/>
+              <ButtonComp text="Pay" type="primary" />
 						</div>
 					</div>
 				</div>

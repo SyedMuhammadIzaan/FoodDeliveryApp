@@ -9,12 +9,13 @@
 		// border: 2px solid green;
 		display: flex;
 		flex-direction: row;
+		gap: 1.8em;
 		width: 100%;
 		height: auto;
 		min-height: 100vh;
 
 		.row-container {
-			border: 2px solid orange;
+			// border: 2px solid orange;
 			width: 50%;
 
 			.header {
@@ -33,6 +34,14 @@
 					}
 				}
 			}
+			.heading {
+				h4 {
+					// border: 2px solid red;
+					font-size: 1em;
+					margin: 0em;
+					line-height: 1;
+				}
+			}
 			.price-container {
 				// border: 2px solid yellow;
 				height: 15vh;
@@ -43,6 +52,8 @@
 					position: absolute;
 					top: -2.5em;
 					margin: 0em;
+					font-size: 1.2em;
+					color: grey;
 					// padding-top: 0em;
 				}
 				p {
@@ -52,35 +63,9 @@
 					margin-bottom: 0em;
 				}
 			}
-			// .booked-items{
-			//     border: 2px solid blue;
-			//     display: flex;
-			//     flex-direction: column;
-			//     .item{
-			//         display: flex;
-			//         justify-content: space-between;
-			//         align-items: center;
-			//         height: 5vh;
-			//         // min-height: 60px;
-			//         // padding: 1em 0;
 
-			//         .item-price{
-			//             border: 2px solid pink;
-			//             display: flex;
-			//             flex-direction: column;
-			//             align-items: center;
-			//             // justify-content: space-between;
-			//             height: 100%;
-
-			//             // p{
-			//             //     padding-top: 0em;
-			//             //     margin: 0em;
-			//             // }
-			//         }
-			//     }
-			// }
 			.booked-items {
-				border: 2px solid blue;
+				// border: 2px solid blue;
 				display: flex;
 				flex-direction: column;
 				margin-top: 1.5em;
@@ -112,12 +97,19 @@
 					}
 				}
 			}
+			.title {
+				h4 {
+					margin-top: -1.4em;
+					margin-bottom: 0em;
+					font-size: 1.4em;
+				}
+			}
 			.payment-form-container {
 				width: 100%;
-				border: 2px solid blue;
+				// border: 2px solid blue;
 
 				.input-fields {
-					border: 2px solid green;
+					// border: 2px solid green;
 					display: flex;
 					flex-direction: column;
 					padding: 10px 0; // Vertical padding only
@@ -166,6 +158,7 @@
 				// Special handling for select dropdown
 				.ant-select {
 					width: 100%;
+					margin-bottom: 1em;
 				}
 			}
 		}
@@ -195,7 +188,8 @@
 					height: 8vh;
 
 					h4 {
-						font-size: 1.5em;
+						font-size: 1.4em;
+						font-weight: 400;
 					}
 					p {
 						font-size: 1.2em;
@@ -242,7 +236,8 @@
 					height: 8vh;
 
 					h4 {
-						font-size: 1.8em;
+						font-size: 1.2em;
+						font-weight: 400;
 					}
 					p {
 						font-size: 1.4em;
@@ -282,7 +277,8 @@
 
 					.heading {
 						h4 {
-							font-size: 1.8em;
+							font-size: 1.3em;
+							font-weight: 500;
 						}
 					}
 				}
@@ -290,22 +286,32 @@
 					height: 8vh;
 
 					h4 {
-						font-size: 1.8em;
+						font-size: 1.2em;
+						font-weight: 400;
 					}
 					p {
-						font-size: 1.4em;
+						font-size: 1.6em;
+						font-weight: bold;
 					}
 				}
 				.booked-items {
 					.item {
 						.item-name {
 							p {
-								font-size: 1.5em;
+								font-size: 1.4em;
+							}
+							.second-child {
+								color: grey;
+								font-size: 1em;
 							}
 						}
 						.item-price {
 							span {
-								font-size: 1.4em;
+								font-size: 1.2em;
+							}
+							.second-child {
+								color: grey;
+								font-size: 1em;
 							}
 						}
 					}

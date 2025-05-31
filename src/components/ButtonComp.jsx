@@ -1,15 +1,16 @@
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 
-const ButtonComp = ({ text, redirectTo }) => {
+const ButtonComp = ({ text, redirectTo,type }) => {
 	const navigate = useNavigate();
-  console.log("Redirect ",redirectTo)
+	
 	return (
 		<>
 			<Button
 				onClick={() => {
 					navigate(redirectTo);
 				}}
+				type={type}
 			>
 				{text}
 			</Button>
