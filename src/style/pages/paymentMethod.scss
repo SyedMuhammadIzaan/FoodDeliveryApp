@@ -26,8 +26,8 @@
 				justify-content: space-evenly;
 				align-items: center;
 
-				.left-arrow-wrapper{
-					button{
+				.left-arrow-wrapper {
+					button {
 						border: none;
 						background-color: white;
 					}
@@ -112,6 +112,62 @@
 					}
 				}
 			}
+			.payment-form-container {
+				width: 100%;
+				border: 2px solid blue;
+
+				.input-fields {
+					border: 2px solid green;
+					display: flex;
+					flex-direction: column;
+					padding: 10px 0; // Vertical padding only
+					margin-bottom: 15px; // Space between fields
+
+					p {
+						margin-top: -40px; // Space between label and input
+						font-weight: 500;
+						margin-bottom: -30px;
+					}
+
+					// Specific styles for card information section
+					.card-info-header {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						// margin-bottom: 8px;
+					}
+
+					.card-details {
+						display: flex;
+						gap: 15px;
+						margin-top: 10px;
+
+						.expiry-input {
+							flex: 2;
+						}
+
+						.cvc-input {
+							flex: 1;
+						}
+					}
+				}
+
+				// Style the Ant Design components
+				.ant-input,
+				.ant-input-number,
+				.ant-select-selector {
+					width: 100%;
+					padding: 10px;
+					border-radius: 4px;
+					box-sizing: border-box; // Include padding in width calculation
+					// margin-top: -50px;
+				}
+
+				// Special handling for select dropdown
+				.ant-select {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -126,36 +182,35 @@
 				width: 100%;
 				height: auto;
 
-				.header{
+				.header {
 					width: 180px;
 
-					.heading{
-
-						h4{
+					.heading {
+						h4 {
 							font-size: 1.5em;
 						}
 					}
 				}
-				.price-container{
+				.price-container {
 					height: 8vh;
 
-					h4{
+					h4 {
 						font-size: 1.5em;
 					}
-					p{
+					p {
 						font-size: 1.2em;
 					}
 				}
-				.booked-items{
-					.item{
-						.item-name{
-							p{
+				.booked-items {
+					.item {
+						.item-name {
+							p {
 								font-size: 1.2em;
 							}
 						}
-						.item-price{
-							span{
-								font-size:1.2em;
+						.item-price {
+							span {
+								font-size: 1.2em;
 							}
 						}
 					}
@@ -174,36 +229,35 @@
 				width: 100%;
 				height: auto;
 
-				.header{
+				.header {
 					width: 220px;
 
-					.heading{
-
-						h4{
+					.heading {
+						h4 {
 							font-size: 1.8em;
 						}
 					}
 				}
-				.price-container{
+				.price-container {
 					height: 8vh;
 
-					h4{
+					h4 {
 						font-size: 1.8em;
 					}
-					p{
+					p {
 						font-size: 1.4em;
 					}
 				}
-				.booked-items{
-					.item{
-						.item-name{
-							p{
+				.booked-items {
+					.item {
+						.item-name {
+							p {
 								font-size: 1.5em;
 							}
 						}
-						.item-price{
-							span{
-								font-size:1.4em;
+						.item-price {
+							span {
+								font-size: 1.4em;
 							}
 						}
 					}
@@ -213,7 +267,7 @@
 	}
 }
 
-@include respond-to(769px){
+@include respond-to(769px) {
 	.paymentMethod-wrapper {
 		font-size: 16px;
 		.col-container {
@@ -223,36 +277,35 @@
 				width: 50%;
 				height: auto;
 
-				.header{
+				.header {
 					width: 220px;
 
-					.heading{
-
-						h4{
+					.heading {
+						h4 {
 							font-size: 1.8em;
 						}
 					}
 				}
-				.price-container{
+				.price-container {
 					height: 8vh;
 
-					h4{
+					h4 {
 						font-size: 1.8em;
 					}
-					p{
+					p {
 						font-size: 1.4em;
 					}
 				}
-				.booked-items{
-					.item{
-						.item-name{
-							p{
+				.booked-items {
+					.item {
+						.item-name {
+							p {
 								font-size: 1.5em;
 							}
 						}
-						.item-price{
-							span{
-								font-size:1.4em;
+						.item-price {
+							span {
+								font-size: 1.4em;
 							}
 						}
 					}
