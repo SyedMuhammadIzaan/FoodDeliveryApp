@@ -16,7 +16,7 @@ const ClientRoute = () => {
 				<Route path="menu" element={<Menu />} />
 				<Route path="contact-us" element={<ContactUs />} />
 				<Route path="add-to-cart" element={<AddToCart />} />
-				<Route path="add-to-cart/delivery-info" element={<DeliveryInformation />} />
+				<Route path="delivery-info" element={<DeliveryInformation />} />
 				<Route path="payment" element={<PaymentMethod />} />
 			</Route>
 		</>

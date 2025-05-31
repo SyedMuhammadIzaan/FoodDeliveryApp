@@ -28,6 +28,7 @@
 				align-items: center;
 
 				.left-arrow-wrapper {
+					// border:2px solid blue;
 					button {
 						border: none;
 						background-color: white;
@@ -35,10 +36,12 @@
 				}
 			}
 			.heading {
+				// border:2px solid blue;
 				h4 {
 					// border: 2px solid red;
 					font-size: 1em;
-					margin: 0em;
+					margin-top:-0.7em;
+					margin-bottom: 0em;
 					line-height: 1;
 				}
 			}

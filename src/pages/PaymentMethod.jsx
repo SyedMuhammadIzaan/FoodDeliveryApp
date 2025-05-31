@@ -24,7 +24,7 @@ const PaymentMethod = () => {
 						<div className="left-arrow-wrapper">
 							<button
 								onClick={() => {
-									navigate("delivery-info");
+									navigate("/delivery-info");
 								}}
 							>
 								<GoArrowLeft size={22} />
