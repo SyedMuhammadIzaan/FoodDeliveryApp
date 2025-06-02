@@ -7,7 +7,7 @@ import ContactUs from "../pages/ContactUs";
 import AddToCart from "../components/AddToCart";
 import DeliveryInformation from "../pages/DeliveryInformation";
 import PaymentMethod from "../pages/paymentMethod";
-
+import NotFound from "../pages/NotFound";
 const ClientRoute = () => {
 	return (
 		<>
@@ -18,6 +18,9 @@ const ClientRoute = () => {
 				<Route path="add-to-cart" element={<AddToCart />} />
 				<Route path="delivery-info" element={<DeliveryInformation />} />
 				<Route path="payment" element={<PaymentMethod />} />
+				<Route path="*" element={<NotFound />} />
+
+				{/* Auth */}
 			</Route>
 		</>
 	);
