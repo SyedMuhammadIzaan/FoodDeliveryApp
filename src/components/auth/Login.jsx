@@ -1,11 +1,13 @@
 import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
-import "../../style/clientLayoutComponent.scss"
-const Login = () => {
-    const onFinish = (values) => {
+import "../../style/clientLayoutComponent.scss";
+
+const Login = ({ handleLoginView }) => {
+	const onFinish = (values) => {
 		console.log("Received values of form: ", values);
 	};
+
 	return (
 		<div className="login-container">
 			<Form
@@ -43,7 +45,16 @@ const Login = () => {
 					<Button block type="primary" htmlType="submit">
 						Log in
 					</Button>
-					or <a href="">SignUp</a>
+					or{" "}
+					<a
+						onClick={(e) => {
+							e.preventDefault();
+							handleLoginView(false);
+						}}
+						href="#"
+					>
+						Sign Up
+					</a>
 				</Form.Item>
 			</Form>
 		</div>

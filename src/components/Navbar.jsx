@@ -56,7 +56,7 @@ const Navbar = () => {
 					/>
 				</div>
 			</div>
-      <ModalComp modalOpen={isModalOpen} handleModal={setIsModalOpen} />
+			<ModalComp modalOpen={isModalOpen} handleModal={setIsModalOpen} />
 
 			{/* Mobile menu */}
 			<div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
