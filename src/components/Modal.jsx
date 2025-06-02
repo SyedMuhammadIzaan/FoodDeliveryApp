@@ -1,25 +1,24 @@
 import React from "react";
 import { Modal } from "antd";
+import Login from "./auth/Login";
 
-const ModalComp = ({modalOpen}) => {
+const ModalComp = ({modalOpen,handleModal}) => {
 	const handleOk = () => {
-		modalOpen(false);
+		handleModal(false);
 	};
 	const handleCancel = () => {
-		modalOpen(false);
+		handleModal(false);
 	};
 	return (
 		<>
 			<Modal
-				title="Basic Modal"
+				// title="Basic Modal"
 				closable={{ "aria-label": "Custom Close Button" }}
 				open={modalOpen}
 				onOk={handleOk}
 				onCancel={handleCancel}
 			>
-				<p>Some contents...</p>
-				<p>Some contents...</p>
-				<p>Some contents...</p>
+				<Login />
 			</Modal>
 		</>
 	);

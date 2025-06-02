@@ -164,6 +164,13 @@
 	}
 }
 
+.login-container{
+	// border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
 .footer-wrapper {
 	// border: 2px solid green;
 	display: flex;
@@ -345,6 +352,8 @@
 		}
 	}
 }
+
+
 
 @include respond-between(480px, 320px) {
 	.herobanner-wrapper {
