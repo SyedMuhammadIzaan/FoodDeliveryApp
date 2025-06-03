@@ -1,6 +1,8 @@
 import "../style/clientLayoutComponent.scss";
-
-const TotalBill = ({subTotal,deliveryFee}) => {
+import { useSelector } from "react-redux";
+const TotalBill = () => {
+	const { pricing } = useSelector((state) => state.order);
+	console.log("Pricing of Orders", pricing.subtotal);
 
 	return (
 		<div className="total-bill-wrapper">
@@ -11,15 +13,16 @@ const TotalBill = ({subTotal,deliveryFee}) => {
 				<div className="bill-details">
 					<div className="bill-row">
 						<span>Sub Total</span>
-						<span>$ {subTotal}</span>
+						<span>$ {pricing.subtotal}</span>
 					</div>
 					<div className="bill-row">
 						<span>Delivery Fee</span>
-						<span>$ {deliveryFee}</span>
+						<span>$ {pricing.deliveryFee}</span>
 					</div>
 					<div className="bill-row-total">
 						<span>Total</span>
-						<span>$ {subTotal * deliveryFee}</span>
+						<span>$ {pricing.total}</span>
+						{/* <span>$ {subTotal * deliveryFee}</span> */}
 					</div>
 				</div>
 			</div>

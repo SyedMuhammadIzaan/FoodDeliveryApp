@@ -12,9 +12,9 @@ const AddToCart = () => {
 	const orders = useSelector((state) => state.order.orders);
 	console.log("Orders", orders);
 
-	const subTotal=orders.reduce((sum,order)=>{
-		return sum + (order.amount * order.quantity)
-	},0)
+	// const subTotal=orders.reduce((sum,order)=>{
+	// 	return sum + (order.amount * order.quantity)
+	// },0)
 
 	return (
 		<div className="add-to-cart-wrapper">
@@ -72,7 +72,7 @@ const AddToCart = () => {
 				<div className="cart-items-row">
 					<div className="cart-summary-section">
 						<div className="billing-action-wrapper">
-							<TotalBill subTotal={subTotal} deliveryFee={7} />
+							<TotalBill />
 							<div className="billing-action-btn-wrapper">
 								<ButtonComp redirectTo={"delivery-info"} text="Proceed to Checkout" />
 								{/* <button onClick={navigate("delivery-info")}>Proceed to Checkout</button> */}

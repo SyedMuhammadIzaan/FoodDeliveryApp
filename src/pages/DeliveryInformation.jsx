@@ -2,12 +2,15 @@ import { Input, InputNumber } from "antd";
 import ButtonComp from "../components/ButtonComp";
 import TotalBill from "../components/TotalBill";
 import "../style/pages/DeliveryInformation.scss";
+import { useSelector } from "react-redux";
 
 const DeliveryInformation = () => {
+	const {pricing}=useSelector((state)=>state.order);
+	console.log("Pricing",pricing)
 	return (
 		<div className="delivery-info-wrapper">
-			<h3>Delivery Information</h3>
 			<div className="delivery-info-row">
+				<h3>Delivery Information</h3>
 				<div className="delivery-info-col">
 					<div className="delivery-info-field">
 						<div className="name-fields">

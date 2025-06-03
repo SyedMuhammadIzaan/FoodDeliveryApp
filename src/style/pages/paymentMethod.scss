@@ -24,7 +24,7 @@
 				// border: 2px solid brown;
 				display: flex;
 				flex-direction: row;
-				justify-content: space-evenly;
+				justify-content: space-between;
 				align-items: center;
 
 				.left-arrow-wrapper {
@@ -110,13 +110,14 @@
 			.payment-form-container {
 				width: 100%;
 				// border: 2px solid blue;
+				margin-top: -1.4em;
 
 				.input-fields {
 					// border: 2px solid green;
 					display: flex;
 					flex-direction: column;
-					padding: 10px 0; // Vertical padding only
-					margin-bottom: 15px; // Space between fields
+					padding: 0px 0px; // Vertical padding only
+					margin-bottom: 10px; // Space between fields
 
 					p {
 						margin-top: -40px; // Space between label and input
@@ -276,7 +277,7 @@
 				height: auto;
 
 				.header {
-					width: 220px;
+					width: 150px;
 
 					.heading {
 						h4 {
