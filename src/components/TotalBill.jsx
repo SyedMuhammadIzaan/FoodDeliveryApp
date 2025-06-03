@@ -13,7 +13,7 @@ const TotalBill = () => {
 				<div className="bill-details">
 					<div className="bill-row">
 						<span>Sub Total</span>
-						<span>$ {pricing.subtotal}</span>
+						<span>$ {pricing.subtotal || 0}</span>
 					</div>
 					<div className="bill-row">
 						<span>Delivery Fee</span>
