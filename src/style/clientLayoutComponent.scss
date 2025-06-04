@@ -167,7 +167,7 @@
 	}
 }
 
-.login-container{
+.login-container {
 	// border: 2px solid black;
 	display: flex;
 	justify-content: center;
@@ -355,8 +355,6 @@
 		}
 	}
 }
-
-
 
 @include respond-between(480px, 320px) {
 	.herobanner-wrapper {
@@ -1150,15 +1148,16 @@
 }
 @include respond-to(1024px) {
 	.herobanner-wrapper {
+		// border: 2px solid green;
 		font-size: 16px;
 		.herobanner-content {
-			height: 50vh;
+			height: 80vh;
 			.herobanner-title {
 				// border: 2px solid red;
 				height: 65px;
 				width: 500px;
 				box-sizing: border-box;
-				top: 6em;
+				top: 14em;
 				left: 1.5em;
 				line-height: 1.2;
 				h2 {
@@ -1167,7 +1166,7 @@
 			}
 			.herobanner-desc {
 				// border: 2px solid blue;
-				top: 12em;
+				top: 21em;
 				width: 500px;
 				left: 1.5em;
 				line-height: 1.2;
@@ -1310,6 +1309,38 @@
 		}
 		.promo-code-section {
 			width: 50%;
+		}
+	}
+}
+
+@include respond-to(1440px) {
+	.herobanner-wrapper {
+		// border: 2px solid purple;
+		font-size: 16px;
+		.herobanner-content {
+			height: 60vh;
+			.herobanner-title {
+				// border: 2px solid red;
+				height: 65px;
+				width: 500px;
+				box-sizing: border-box;
+				top: 17em;
+				left: 1.5em;
+				line-height: 1.2;
+				h2 {
+					font-size: 2.5em;
+				}
+			}
+			.herobanner-desc {
+				// border: 2px solid blue;
+				top: 24em;
+				width: 500px;
+				left: 1.5em;
+				line-height: 1.2;
+				span {
+					font-size: 1em;
+				}
+			}
 		}
 	}
 }
