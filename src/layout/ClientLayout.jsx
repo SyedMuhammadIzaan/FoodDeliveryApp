@@ -8,7 +8,7 @@ const { Header, Footer, Sider, Content } = Layout;
 const layoutStyle = {
     borderRadius: 8,
     overflow: "hidden",
-    width: "100vw",
+    width: "100%",
 };
 
 const headerStyle = {
