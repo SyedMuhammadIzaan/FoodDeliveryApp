@@ -7,10 +7,13 @@
 	box-sizing: border-box;
 
 	.herobanner-content {
-		border: 2px solid black;
+		// border: 2px solid black;
 		border-radius: 10px;
 		height: 65vh;
+		width: 100%;
 		position: relative;
+		color: white;
+		background: url("../assets/herobanner_img.png") center/cover no-repeat;
 
 		.herobanner-title {
 			position: absolute;
@@ -360,17 +363,18 @@
 		font-size: 14px;
 
 		.herobanner-content {
+			height: 35vh;
 			.herobanner-title {
 				// border: 2px solid red;
 				height: 85px;
-				top: 7em;
+				top: 10em;
 				left: 0.5em;
 				h2 {
-					font-size: 1.1em;
+					font-size: 1em;
 				}
 			}
 			.herobanner-desc {
-				top: 12.4em;
+				top: 16em;
 				left: 0.5em;
 				// border: 2px solid blue;
 				line-height: 1.2;
@@ -596,26 +600,27 @@
 		font-size: 14px;
 
 		.herobanner-content {
+			height: 35vh;
 			.herobanner-title {
 				// border: 2px solid red;
 				height: 75px;
 				width: 60%;
 				box-sizing: border-box;
-				top: 7em;
+				top: 12em;
 				left: 1.5em;
 				line-height: 1.2;
 				h2 {
-					font-size: 1.8em;
+					font-size: 1.7em;
 				}
 			}
 			.herobanner-desc {
 				// border: 2px solid blue;
-				top: 12.4em;
+				top: 17em;
 				width: 60%;
 				left: 1.5em;
 				line-height: 1.2;
 				span {
-					font-size: 0.85em;
+					font-size: 0.9em;
 				}
 			}
 		}
@@ -1043,7 +1048,7 @@
 				height: 65px;
 				width: 400px;
 				box-sizing: border-box;
-				top: 8em;
+				top: 8.5em;
 				left: 1.5em;
 				line-height: 1.2;
 				h2 {
@@ -1051,7 +1056,7 @@
 				}
 			}
 			.herobanner-desc {
-				top: 12.4em;
+				top: 13em;
 				width: 400px;
 				left: 1.5em;
 				line-height: 1.2;
@@ -1147,12 +1152,13 @@
 	.herobanner-wrapper {
 		font-size: 16px;
 		.herobanner-content {
+			height: 50vh;
 			.herobanner-title {
 				// border: 2px solid red;
 				height: 65px;
 				width: 500px;
 				box-sizing: border-box;
-				top: 8.2em;
+				top: 6em;
 				left: 1.5em;
 				line-height: 1.2;
 				h2 {
@@ -1161,7 +1167,7 @@
 			}
 			.herobanner-desc {
 				// border: 2px solid blue;
-				top: 14.5em;
+				top: 12em;
 				width: 500px;
 				left: 1.5em;
 				line-height: 1.2;
