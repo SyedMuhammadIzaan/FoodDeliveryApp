@@ -1,8 +1,8 @@
 import { Input, InputNumber } from "antd";
+import { useSelector } from "react-redux";
 import ButtonComp from "../components/ButtonComp";
 import TotalBill from "../components/TotalBill";
 import "../style/pages/DeliveryInformation.scss";
-import { useSelector } from "react-redux";
 
 const DeliveryInformation = () => {
 	const {pricing}=useSelector((state)=>state.order);
@@ -47,7 +47,7 @@ const DeliveryInformation = () => {
 					<div className="total-bill">
 						<TotalBill />
 						<div className="proceed-to-payment-btn">
-							<ButtonComp redirectTo={"/payment"} text="Proceed to Payment" />
+							<ButtonComp redirectTo={"/payment"} text="Proceed to Payment" color="danger" />
 						</div>
 					</div>
 				</div>

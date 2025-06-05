@@ -74,7 +74,7 @@ const AddToCart = () => {
 						<div className="billing-action-wrapper">
 							<TotalBill />
 							<div className="billing-action-btn-wrapper">
-								<ButtonComp redirectTo={"/delivery-info"} text="Proceed to Checkout" />
+								<ButtonComp redirectTo={"/delivery-info"} text="Proceed to Checkout" color="danger" />
 								{/* <button onClick={navigate("delivery-info")}>Proceed to Checkout</button> */}
 							</div>
 						</div>

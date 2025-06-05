@@ -1,9 +1,9 @@
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 
-const ButtonComp = ({ text, redirectTo, type }) => {
+const ButtonComp = ({ text, redirectTo, type, color }) => {
 	const navigate = useNavigate();
-
+	console.log("Color",color)
 	return (
 		<>
 			<Button
@@ -11,6 +11,8 @@ const ButtonComp = ({ text, redirectTo, type }) => {
 					navigate(redirectTo);
 				}}
 				type={type}
+				color={color}
+				variant="solid"
 			>
 				{text}
 			</Button>
