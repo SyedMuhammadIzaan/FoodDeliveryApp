@@ -1,10 +1,19 @@
-import React from "react";
+// import React from "react";
 import { Button, Form, Input } from "antd";
+import { useDispatch, useSelector } from "react-redux";
+import {signUp} from "../../features/user/UserSlice.js";
+
 
 const SignUp = ({ handleLoginView }) => {
+	
+	const dispatch=useDispatch();
 	const onFinish = (values) => {
-		console.log("Received values of form: ", values);
+		// console.log("Received values of form: ", values);
+		dispatch(signUp({username:values.FullName,email:values.Email,password:values.Password}))
 	};
+	const {signup}=useSelector((state)=>state.user)
+	
+	localStorage.setItem("UserInfo",JSON.stringify(signup))
 
 	const goToLogin = () => {
 		handleLoginView(true);
@@ -12,12 +21,13 @@ const SignUp = ({ handleLoginView }) => {
 
 	return (
 		<div>
+			<h3>Sign Up</h3>
 			<Form onFinish={onFinish}>
 				<Form.Item
 					name="FullName"
 					rules={[{ required: true, message: "Please Input your Fullname" }]}
 				>
-					<Input />
+					<Input placeholder="Enter Your Full Name" />
 				</Form.Item>
 				<Form.Item
 					name="Email"

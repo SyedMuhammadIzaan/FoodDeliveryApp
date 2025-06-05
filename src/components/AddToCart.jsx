@@ -4,8 +4,7 @@ import TotalBill from "./TotalBill";
 import ButtonComp from "./ButtonComp";
 import { useSelector } from "react-redux";
 import "../style/clientLayoutComponent.scss";
-// import { useNavigate } from "react-router-dom";
-// import { useState } from "react";
+
 const AddToCart = () => {
 	// const [orders,setOrders]=useState([])
 	// const navigate=useNavigate()

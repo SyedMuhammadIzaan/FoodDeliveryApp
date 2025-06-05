@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaShoppingBasket } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
-import { NavLink, useNavigate } from "react-router-dom";
-import "../style/Navbar.scss";
+import { RxAvatar } from "react-icons/rx";
 import ModalComp from "./Modal";
+import "../style/Navbar.scss";
 
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const userInfo = JSON.parse(localStorage.getItem("UserInfo"));
+	console.log("User Info", userInfo);
 	const navigate = useNavigate();
 
 	const toggleMenu = () => {
@@ -46,9 +49,13 @@ const Navbar = () => {
 						className="nav-icon"
 						size={20}
 					/>
-					<button onClick={showModal} className="signInBtn">
-						Sign In
-					</button>
+					{userInfo ? (
+						<div style={{display:"flex",flexDirection:"row"}}><RxAvatar size={22} /><span className="username">{userInfo.username}</span></div>
+					) : (
+						<button onClick={showModal} className="signInBtn">
+							Sign In
+						</button>
+					)}
 					<RxHamburgerMenu
 						className="hamburger-icon"
 						size={30}
