@@ -50,7 +50,10 @@ const Navbar = () => {
 						size={20}
 					/>
 					{userInfo ? (
-						<div style={{display:"flex",flexDirection:"row"}}><RxAvatar size={22} /><span className="username">{userInfo.username}</span></div>
+						<>
+							<RxAvatar className="nav-icon" size={20} />
+							<span className="username">{userInfo.username}</span>
+						</>
 					) : (
 						<button onClick={showModal} className="signInBtn">
 							Sign In

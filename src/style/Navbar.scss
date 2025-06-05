@@ -27,11 +27,15 @@
 		}
 
 		.navbar-buttons {
+			// border:2px solid green;
 			width: 5%;
 			display: flex;
 			justify-content: space-evenly;
       		align-items: center;
 
+			.username{
+				font-size: 0.9em;
+			}
 			.nav-icon {
 				cursor: pointer;
 			}
