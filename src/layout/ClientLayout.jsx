@@ -32,7 +32,7 @@ const headerStyle = {
 const footerStyle = {
     color: '#fff',
     width:"100vw",
-    backgroundColor: 'grey',
+    backgroundColor: 'orange',
     // padding:"20px"
   };
 
