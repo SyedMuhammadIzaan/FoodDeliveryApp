@@ -12,7 +12,10 @@ const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const userInfo = JSON.parse(localStorage.getItem("UserInfo"));
-	console.log("User Info", userInfo);
+	const names=userInfo.username.trim().split(" ");
+	const nameFirstChar=names[0][0] + (names[1] ? names[1][0] : "")
+	// console.log("NamesFirst Char",nameFirstChar)
+	// console.log("User Info", userInfo);
 	const navigate = useNavigate();
 
 	const toggleMenu = () => {
@@ -50,10 +53,11 @@ const Navbar = () => {
 						size={20}
 					/>
 					{userInfo ? (
-						<>
-							<RxAvatar className="nav-icon" size={20} />
-							<span className="username">{userInfo.username}</span>
-						</>
+						<div className="user-avatar">
+							<RxAvatar id="avatar-icon" size={20} />
+							{/* <RxAvatar id="avatar-icon" className="nav-icon" size={20} /> */}
+							<span className="username">{nameFirstChar}</span>
+						</div>
 					) : (
 						<button onClick={showModal} className="signInBtn">
 							Sign In
