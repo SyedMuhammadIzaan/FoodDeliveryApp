@@ -1,15 +1,15 @@
 import { MdDeleteOutline } from "react-icons/md";
+import { useSelector } from "react-redux";
 import { Input } from "antd";
 import TotalBill from "./TotalBill";
 import ButtonComp from "./ButtonComp";
-import { useSelector } from "react-redux";
 import "../style/clientLayoutComponent.scss";
 
 const AddToCart = () => {
 	// const [orders,setOrders]=useState([])
 	// const navigate=useNavigate()
 	const orders = useSelector((state) => state.order.orders);
-	console.log("Orders", orders);
+	// console.log("Orders", orders);
 
 	// const subTotal=orders.reduce((sum,order)=>{
 	// 	return sum + (order.amount * order.quantity)

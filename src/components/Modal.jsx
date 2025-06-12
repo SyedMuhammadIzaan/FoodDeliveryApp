@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Modal } from "antd";
 import Login from "./auth/Login";
 import SignUp from "./auth/SignUp";
@@ -22,7 +22,11 @@ const ModalComp = ({ modalOpen, handleModal }) => {
 				onOk={handleOk}
 				onCancel={handleCancel}
 			>
-				{isLoginView ? <Login handleLoginView={setIsLoginView} /> : <SignUp handleLoginView={setIsLoginView} />}
+				{isLoginView ? (
+					<Login handleLoginView={setIsLoginView} />
+				) : (
+					<SignUp handleLoginView={setIsLoginView} />
+				)}
 			</Modal>
 		</>
 	);

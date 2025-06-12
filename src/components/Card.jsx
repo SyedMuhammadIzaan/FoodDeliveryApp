@@ -1,11 +1,10 @@
+import { useState } from "react";
 import { Button, Card } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { foodItem } from "../constant";
 import { useDispatch } from "react-redux";
-// const { Meta } = Card;
 import { addOrder } from "../features/orders/orderSlice.js";
 import "../style/clientLayoutComponent.scss";
-import { useState } from "react";
 
 const CardComp = ({ item }) => {
 	const dispatch = useDispatch();
@@ -20,13 +19,12 @@ const CardComp = ({ item }) => {
 			...selectItem,
 			quantity: quantity,
 		};
-		console.log("Order Item", orderItem);
+		// console.log("Order Item", orderItem);
 		dispatch(addOrder(orderItem));
 	};
 	const handleQuantityChange = (itemId, change) => {
 		setQuantities((prev) => {
 			const current = prev[itemId] || 0;
-			console.log("Current")
 			const newQuantity = current + change;
 			return {
 				...prev,
@@ -34,7 +32,7 @@ const CardComp = ({ item }) => {
 			};
 		});
 	};
-	console.log("Qty", quantities);
+	// console.log("Qty", quantities);
 	// console.log("Filter Item ", filterItemOfCard);
 	return (
 		<div className="item-wrapper">

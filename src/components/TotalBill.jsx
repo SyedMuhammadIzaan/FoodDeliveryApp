@@ -1,5 +1,6 @@
-import "../style/clientLayoutComponent.scss";
 import { useSelector } from "react-redux";
+import "../style/clientLayoutComponent.scss";
+
 const TotalBill = () => {
 	const { pricing } = useSelector((state) => state.order);
 	console.log("Pricing of Orders", pricing.subtotal);

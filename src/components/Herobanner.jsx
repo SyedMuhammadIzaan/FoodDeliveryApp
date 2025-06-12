@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/clientLayoutComponent.scss";
+
 const Herobanner = () => {
 	return (
 		<div className="herobanner-wrapper">

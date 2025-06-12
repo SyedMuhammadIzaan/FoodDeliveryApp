@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { TbBrandFacebook } from "react-icons/tb";
 import { FaInstagram } from "react-icons/fa6";
 import { LuTwitter } from "react-icons/lu";
+
 const FooterComp = () => {
 	return (
 		<div className="footer-wrapper">

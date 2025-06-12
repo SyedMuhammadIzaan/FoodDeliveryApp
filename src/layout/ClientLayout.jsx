@@ -1,4 +1,3 @@
-import React from "react";
 import { Layout } from "antd";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
