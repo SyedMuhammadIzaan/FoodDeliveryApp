@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaShoppingBasket } from "react-icons/fa";
@@ -11,9 +11,15 @@ import "../style/Navbar.scss";
 const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [fullNameFirstChar, setFullNameFirstChar] = useState();
 	const userInfo = JSON.parse(localStorage.getItem("UserInfo"));
-	const names=userInfo.username.trim().split(" ");
-	const nameFirstChar=names[0][0] + (names[1] ? names[1][0] : "")
+	useEffect(() => {
+		if (userInfo) {
+			const names = userInfo.username.trim().split(" ");
+			setFullNameFirstChar(names[0][0] + (names[1] ? names[1][0] : ""));
+		}
+	}, [userInfo]);
+
 	// console.log("NamesFirst Char",nameFirstChar)
 	// console.log("User Info", userInfo);
 	const navigate = useNavigate();
@@ -56,7 +62,7 @@ const Navbar = () => {
 						<div className="user-avatar">
 							<RxAvatar id="avatar-icon" size={20} />
 							{/* <RxAvatar id="avatar-icon" className="nav-icon" size={20} /> */}
-							<span className="username">{nameFirstChar}</span>
+							<span className="username">{fullNameFirstChar}</span>
 						</div>
 					) : (
 						<button onClick={showModal} className="signInBtn">

@@ -15,17 +15,18 @@ const CardComp = ({ item }) => {
 		return element.category === item;
 	});
 	const handleAddToCart = (selectItem) => {
-		const quantity = quantities[selectItem.id] || 1; 
-		const orderItem={
+		const quantity = quantities[selectItem.id] || 1;
+		const orderItem = {
 			...selectItem,
-			quantity:quantity
-		}
-		console.log("Order Item",orderItem)
+			quantity: quantity,
+		};
+		console.log("Order Item", orderItem);
 		dispatch(addOrder(orderItem));
 	};
 	const handleQuantityChange = (itemId, change) => {
 		setQuantities((prev) => {
 			const current = prev[itemId] || 0;
+			console.log("Current")
 			const newQuantity = current + change;
 			return {
 				...prev,

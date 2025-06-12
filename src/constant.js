@@ -380,6 +380,7 @@ export const foodItem = [
     {
 		id:16,
         name:"Brightfarms Spring Onion - Hari Piyaz (Pakistan) 250 g",
+		deliveryTime:"5 - 10 min",
         amount:59.00,
         weight:250,
         category:"Pure Veg",
@@ -388,6 +389,7 @@ export const foodItem = [
     {
 		id:17,
         name:"Carrot Orange 500g",
+		deliveryTime:"5 - 10 min",
         amount:79.00,
         weight:500,
         category:"Pure Veg",
@@ -396,6 +398,7 @@ export const foodItem = [
     {
 		id:18,
         name:"Lemon",
+		deliveryTime:"5 - 10 min",
         amount:299.00,
         weight:250,
         category:"Pure Veg",
