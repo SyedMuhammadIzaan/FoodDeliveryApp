@@ -299,6 +299,7 @@
 
 			.display-cart-items {
 				.item-title {
+					// border: 2px solid green;
 					border-bottom: 2px solid grey;
 					display: flex;
 					flex-direction: row;
@@ -306,6 +307,8 @@
 					align-items: center;
 					font-weight: 600;
 					height: 15vh;
+					text-align: center;
+
 					.heading {
 						// text-align: center;
 						flex: 1;
@@ -317,6 +320,9 @@
 				}
 				.booked-items {
 					// border: 2px solid purple;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
 					margin: 1em 0em 1em 0em;
 
 					.display-items {

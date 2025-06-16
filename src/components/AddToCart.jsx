@@ -3,25 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { Input } from "antd";
 import TotalBill from "./TotalBill";
 import ButtonComp from "./ButtonComp";
-import "../style/clientLayoutComponent.scss";
 import { removeFromCart } from "../features/orders/orderSlice";
+import "../style/clientLayoutComponent.scss";
 
 const AddToCart = () => {
-	// const [orders,setOrders]=useState([])
-	// const navigate=useNavigate()
 	const dispatch=useDispatch();
 	const orders = useSelector((state) => state.order.orders);
 	
 	const handleDeleteOrder=(orderId)=>{
 		dispatch(removeFromCart({orderId}))
 	}
-	// console.log("Orders", orders);
-
-	// const subTotal=orders.reduce((sum,order)=>{
-	// 	return sum + (order.amount * order.quantity)
-	// },0)
-
-
+	
 	return (
 		<div className="add-to-cart-wrapper">
 			<div className="cart-items-col">
@@ -43,7 +35,7 @@ const AddToCart = () => {
 							<div className="heading">
 								<p>Total</p>
 							</div>
-							<div>
+							<div className="heading">
 								<p>Remove</p>
 							</div>
 						</div>
@@ -67,7 +59,7 @@ const AddToCart = () => {
 											<p>{order.amount * order.quantity}</p>
 										</div>
 										<div className="item">
-											<MdDeleteOutline onClick={()=>{handleDeleteOrder(order.id)}} />
+											<MdDeleteOutline size={22} color="red" onClick={()=>{handleDeleteOrder(order.id)}} />
 										</div>
 									</div>
 								);
