@@ -31,7 +31,7 @@ const contentStyle = {
 const footerStyle = {
 	color: "#fff",
 	width: "100vw",
-	backgroundColor: "orange",
+	backgroundColor: "#323232",
 	// padding:"20px"
 };
 
