@@ -15,7 +15,7 @@ const Navbar = () => {
 	const userInfo = JSON.parse(localStorage.getItem("UserInfo"));
 	useEffect(() => {
 		if (userInfo) {
-			const names = userInfo.username.trim().split(" ");
+			const names = userInfo.username.toUpperCase().trim().split(" ");
 			setFullNameFirstChar(names[0][0] + (names[1] ? names[1][0] : ""));
 		}
 	}, [userInfo]);

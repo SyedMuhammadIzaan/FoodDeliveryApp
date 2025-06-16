@@ -4,7 +4,7 @@ const initialState = {
   orders: [],
   pricing: {
     subtotal: 0,
-    deliveryFee: 50, // Default delivery fee
+    deliveryFee: 15, // Default delivery fee
     total: 0,
   },
 };
@@ -19,7 +19,8 @@ export const cartSlice = createSlice({
       state.pricing.total = state.pricing.subtotal + state.pricing.deliveryFee;
     },
     removeFromCart: (state, action) => {
-      state.orders = state.orders.filter(item => item.id !== action.payload);
+      console.log("Remove order No",action.payload)
+      state.orders=state.orders.filter(item => item.id !== action.payload.orderId);
       state.pricing.subtotal = calculateSubtotal(state.orders);
       state.pricing.total = state.pricing.subtotal + state.pricing.deliveryFee;
     },

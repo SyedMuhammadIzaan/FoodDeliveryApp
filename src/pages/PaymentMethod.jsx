@@ -1,21 +1,23 @@
-// import React from 'react'
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Input, InputNumber, Select } from "antd";
+import { CreditCardOutlined } from "@ant-design/icons";
 import { GoArrowLeft } from "react-icons/go";
 import { FiDatabase } from "react-icons/fi";
-import { CreditCardOutlined } from "@ant-design/icons";
-import { useSelector } from "react-redux";
-import "../style/pages/paymentMethod.scss";
 import ButtonComp from "../components/ButtonComp";
+import "../style/pages/paymentMethod.scss";
 
 const PaymentMethod = () => {
 	const navigate = useNavigate();
-	const orders = useSelector((state) => state.order.orders);
+	const { orders, pricing } = useSelector((state) => state.order);
+	// const [orderPayment, setOrderPayment] = useState([{ ...orders, pricing }]);
+	// console.log("orderPayment", orderPayment);
 
 	// const handleChange = (value) => {
 	// 	console.log(`selected ${value}`);
 	// };
-	console.log("Orders", orders);
+	// console.log("Orders", orders);
+	// console.log("pricing", pricing);
 	return (
 		<div className="paymentMethod-wrapper">
 			<div className="col-container">
@@ -39,21 +41,37 @@ const PaymentMethod = () => {
 					</div>
 					<div className="price-container">
 						<h4>Pay Courses</h4>
-						<p>$ 220.00</p>
+						<p>$ {pricing.total}</p>
 					</div>
 					<div className="booked-items">
+						{orders.map((order, index) => {
+							return (
+								<div key={index} className="item">
+									<div className="item-name">
+										<p>{order.name}</p>
+										<p className="second-child">Qty {order.quantity}</p>
+									</div>
+									<div className="item-price">
+										<span>$ {order.amount * order.quantity}</span>
+										<span className="second-child">$ {order.amount} each</span>
+									</div>
+								</div>
+							);
+						})}
+						<hr />
 						<div className="item">
 							<div className="item-name">
-								<p>Greek Salad</p>
-								<p className="second-child">Qty</p>
+								<p>Delivery Charge</p>
+								<p className="second-child">Qty 1</p>
 							</div>
 							<div className="item-price">
-								<span>$ 24.00</span>
-								<span className="second-child">$ 12.00</span>
+								<span>
+									{orders.length > 0
+										? orders.length * pricing.deliveryFee
+										: "$ 0"}
+								</span>
 							</div>
 						</div>
-						<div className="item"></div>
-						<div className="item"></div>
 					</div>
 				</div>
 				<div className="row-container">
@@ -70,10 +88,9 @@ const PaymentMethod = () => {
 							<div className="card-info-header">
 								<p>Card Information</p>
 							</div>
-								<Input
-									placeholder="Card number"
-                  suffix={<CreditCardOutlined />}
-								/>
+							<Input
+								placeholder="Card number"
+								suffix={<CreditCardOutlined />} />
 							<div className="card-details">
 								<InputNumber placeholder="MM / YY" className="expiry-input" />
 								<InputNumber placeholder="CVC" className="cvc-input" />
@@ -110,10 +127,9 @@ const PaymentMethod = () => {
 									{ value: "mx", label: "Mexico" },
 									{ value: "es", label: "Spain" },
 									{ value: "it", label: "Italy" },
-									// Add more countries as needed
 								]}
 							/>
-              <ButtonComp text="Pay" type="primary" />
+							<ButtonComp text="Pay" type="primary" />
 						</div>
 					</div>
 				</div>
