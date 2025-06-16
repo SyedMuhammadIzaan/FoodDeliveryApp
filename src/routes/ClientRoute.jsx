@@ -1,6 +1,6 @@
 // import React from "react";
 import { Route } from "react-router-dom";
-import ClientLayout from "../layout/clientLayout";
+import ClientLayout from "../layout/ClientLayout";
 import Home from "../pages/Home";
 import Menu from "../pages/Menu";
 import ContactUs from "../pages/ContactUs";

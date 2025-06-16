@@ -7,6 +7,7 @@ import {
 	VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
+import { Outlet } from "react-router-dom";
 const { Header, Sider, Content } = Layout;
 
 const AdminLayout = () => {
@@ -16,7 +17,7 @@ const AdminLayout = () => {
 	} = theme.useToken();
 	return (
 		<div>
-			<Layout>
+			<Layout style={{width:"100",height:"100vh"}}>
 				<Sider trigger={null} collapsible collapsed={collapsed}>
 					<div className="demo-logo-vertical" />
 					<Menu
@@ -27,17 +28,17 @@ const AdminLayout = () => {
 							{
 								key: "1",
 								icon: <UserOutlined />,
-								label: "nav 1",
+								label: "Home",
 							},
 							{
 								key: "2",
 								icon: <VideoCameraOutlined />,
-								label: "nav 2",
+								label: "Order",
 							},
 							{
 								key: "3",
 								icon: <UploadOutlined />,
-								label: "nav 3",
+								label: "Food Item",
 							},
 						]}
 					/>
@@ -64,7 +65,7 @@ const AdminLayout = () => {
 							borderRadius: borderRadiusLG,
 						}}
 					>
-						Content
+						<Outlet />
 					</Content>
 				</Layout>
 			</Layout>
