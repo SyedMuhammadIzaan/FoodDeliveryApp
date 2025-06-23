@@ -2,18 +2,21 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 a {
-	font-weight: 500;
+  font-weight: 500;
 	color: black;
 	text-decoration: none;
 }
 a:hover {
-	color: #f86a6a;
+  color: #f86a6a;
 }
 
+body{
+  margin: 0;
+  scroll-behavior: smooth;
+}
 /* body {
 	margin: 0;
 	width: 100%;

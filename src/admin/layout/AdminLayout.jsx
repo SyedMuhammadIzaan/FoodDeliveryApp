@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
 	MenuFoldOutlined,
 	MenuUnfoldOutlined,
@@ -6,6 +6,7 @@ import {
 	UserOutlined,
 	VideoCameraOutlined,
 } from "@ant-design/icons";
+import { RxAvatar } from "react-icons/rx";
 import { Button, Layout, Menu, theme } from "antd";
 import { Outlet } from "react-router-dom";
 const { Header, Sider, Content } = Layout;
@@ -16,8 +17,8 @@ const AdminLayout = () => {
 		token: { colorBgContainer, borderRadiusLG },
 	} = theme.useToken();
 	return (
-		<div>
-			<Layout style={{width:"100",height:"100vh"}}>
+		<>
+			<Layout style={{ width: "100", height: "100vh" }}>
 				<Sider trigger={null} collapsible collapsed={collapsed}>
 					<div className="demo-logo-vertical" />
 					<Menu
@@ -28,7 +29,7 @@ const AdminLayout = () => {
 							{
 								key: "1",
 								icon: <UserOutlined />,
-								label: "Home",
+								label: "Dashboard",
 							},
 							{
 								key: "2",
@@ -38,13 +39,21 @@ const AdminLayout = () => {
 							{
 								key: "3",
 								icon: <UploadOutlined />,
-								label: "Food Item",
+								label: "Item",
 							},
 						]}
 					/>
 				</Sider>
 				<Layout>
-					<Header style={{ padding: 0, background: colorBgContainer }}>
+					<Header
+						style={{
+							padding: 0,
+							background: colorBgContainer,
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+						}}
+					>
 						<Button
 							type="text"
 							icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -55,6 +64,7 @@ const AdminLayout = () => {
 								height: 64,
 							}}
 						/>
+						<RxAvatar style={{marginRight:"12px"}} id="avatar-icon" size={30} />
 					</Header>
 					<Content
 						style={{
@@ -69,7 +79,7 @@ const AdminLayout = () => {
 					</Content>
 				</Layout>
 			</Layout>
-		</div>
+		</>
 	);
 };
 

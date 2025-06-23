@@ -3,8 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaShoppingBasket } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { RxCross2 } from "react-icons/rx";
-import { RxAvatar } from "react-icons/rx";
+import { RxCross2, RxAvatar } from "react-icons/rx";
+// import { RxAvatar } from "react-icons/rx";
 import ModalComp from "./Modal";
 import "../style/Navbar.scss";
 
@@ -20,8 +20,6 @@ const Navbar = () => {
 		}
 	}, [userInfo]);
 
-	// console.log("NamesFirst Char",nameFirstChar)
-	// console.log("User Info", userInfo);
 	const navigate = useNavigate();
 
 	const toggleMenu = () => {
