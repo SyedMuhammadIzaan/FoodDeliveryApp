@@ -6,8 +6,8 @@ import Menu from "../pages/Menu";
 import ContactUs from "../pages/ContactUs";
 import AddToCart from "../components/AddToCart";
 import DeliveryInformation from "../pages/DeliveryInformation";
-import PaymentMethod from "../pages/paymentMethod";
 import NotFound from "../pages/NotFound";
+import PaymentMethod from "../pages/PaymentMethod";
 const ClientRoute = () => {
 	return (
 		<>
