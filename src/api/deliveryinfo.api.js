@@ -1,25 +1,25 @@
 import axiosInstance from "./axiosInstance"
 
 export const createDelivery = (bookData) => {
-    axiosInstance.post(bookData);
+    axiosInstance.post('/delivery-info/c',bookData);
 }
 
 export const getDeliveryById = (id) => {
-    axiosInstance.get(id)
+    axiosInstance.get(`/delivery-info/${id}`)
 }
 
 export const getAllDelivery = () => {
-    axiosInstance.get();
+    axiosInstance.get('/delivery-info');
 }
 
 export const updateDeliveryData = (id, bookData) => {
-    axiosInstance.update(id, bookData);
+    axiosInstance.update(`/delivery-info/${id}`, bookData);
 }
 
 export const deleteDeliveryDataById=(id)=>{
-    axiosInstance.delete(id);
+    axiosInstance.delete(`/delivery-info/${id}`);
 }
 
 export const deleteAllDelivery=()=>{
-    axiosInstance.delete();
+    axiosInstance.delete('/delivery-info');
 }
