@@ -14,9 +14,11 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addOrder: (state, action) => {
+      console.log("Action",action.payload)
       state.orders.push(action.payload);
       state.pricing.subtotal = calculateSubtotal(state.orders);
       state.pricing.total = state.pricing.subtotal + state.pricing.deliveryFee;
+      console.log("State",state)
     },
     removeFromCart: (state, action) => {
       state.orders=state.orders.filter(item => item.id !== action.payload.orderId);
