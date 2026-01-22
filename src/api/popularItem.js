@@ -1,22 +1,22 @@
 import axiosInstance from "./axiosInstance";
 
 export const createPopularItem=(popularData,file)=>{
-    axiosInstance.post(popularData,file);
+    axiosInstance.post('/popular-item/c/',popularData,file);
 }
 
 export const getAllPopularItem=()=>{
-    axiosInstance.get();
+    axiosInstance.get('/popular-item');
 }
 
 export const updatePopularItem=()=>{
-    axiosInstance.put(id,popularData,file);
+    axiosInstance.put(`/popular-item/${id}`,popularData,file);
 }
 
 export const deletePopularItem=(id)=>{
-    axiosInstance.delete(id)
+    axiosInstance.delete(`/popular-item/${id}`)
 }
 
 export const deleteAllPopularItem=()=>{
-    axiosInstance.delete()
+    axiosInstance.delete('/popular-item')
 }
 
