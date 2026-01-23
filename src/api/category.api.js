@@ -1,6 +1,6 @@
 import axiosInstance from "./axiosInstance"
 
-export const createCategory=async (data,file)=>{
+export const newCategory=async (data,file)=>{
     const response=await axiosInstance.post('/category/c',data,file);
     return response.data;
 }

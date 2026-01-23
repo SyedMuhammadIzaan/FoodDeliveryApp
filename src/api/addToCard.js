@@ -1,11 +1,11 @@
 import axiosInstance from "./axiosInstance"
 
-export const addItemToCart=async (itemData,file)=>{
+export const newItemToCart=async (itemData,file)=>{
     const response=await axiosInstance.post('/add-to-cart/c/item',itemData,file);
     return response.data;
 }
 
-export const updateItemOfCart=async (id,itemData,file)=>{
+export const updateItemOfCartById=async (id,itemData,file)=>{
     const response=await axiosInstance.put(`/add-to-cart/${id}`,itemData,file);
     return response.data;
 }

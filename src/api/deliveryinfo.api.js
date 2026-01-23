@@ -1,6 +1,6 @@
 import axiosInstance from "./axiosInstance"
 
-export const createDelivery =async (bookData) => {
+export const newDelivery =async (bookData) => {
     const response=await axiosInstance.post('/delivery-info/c',bookData);
     return response.data;
 }
@@ -15,7 +15,7 @@ export const getAllDelivery =async () => {
     return response.data;
 }
 
-export const updateDeliveryData =async (id, bookData) => {
+export const updateDeliveryDataById =async (id, bookData) => {
     const response=await axiosInstance.update(`/delivery-info/${id}`, bookData);
     return response.data;
 }
