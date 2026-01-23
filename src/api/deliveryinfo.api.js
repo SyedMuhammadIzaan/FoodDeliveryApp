@@ -1,25 +1,31 @@
 import axiosInstance from "./axiosInstance"
 
-export const createDelivery = (bookData) => {
-    axiosInstance.post('/delivery-info/c',bookData);
+export const createDelivery =async (bookData) => {
+    const response=await axiosInstance.post('/delivery-info/c',bookData);
+    return response.data;
 }
 
-export const getDeliveryById = (id) => {
-    axiosInstance.get(`/delivery-info/${id}`)
+export const getDeliveryById =async (id) => {
+    const response=await axiosInstance.get(`/delivery-info/${id}`)
+    return response;
 }
 
-export const getAllDelivery = () => {
-    axiosInstance.get('/delivery-info');
+export const getAllDelivery =async () => {
+    const response=await axiosInstance.get('/delivery-info');
+    return response.data;
 }
 
-export const updateDeliveryData = (id, bookData) => {
-    axiosInstance.update(`/delivery-info/${id}`, bookData);
+export const updateDeliveryData =async (id, bookData) => {
+    const response=await axiosInstance.update(`/delivery-info/${id}`, bookData);
+    return response.data;
 }
 
-export const deleteDeliveryDataById=(id)=>{
-    axiosInstance.delete(`/delivery-info/${id}`);
+export const deleteDeliveryDataById=async (id)=>{
+    await axiosInstance.delete(`/delivery-info/${id}`);
+    return id;
 }
 
-export const deleteAllDelivery=()=>{
-    axiosInstance.delete('/delivery-info');
+export const deleteAllDelivery=async ()=>{
+    await axiosInstance.delete('/delivery-info');
+    return id;
 }
