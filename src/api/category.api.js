@@ -20,11 +20,11 @@ export const getCategoryById=async (id)=>{
 }
 
 export const deleteCategoryById=async (id)=>{
-    await axiosInstance.delete(`/category/${id}`);
-    return id;
+    const response=await axiosInstance.delete(`/category/${id}`);
+    return response.data;
 }
 
 export const deleteAllCategory=async ()=>{
-    await axiosInstance.delete('/category');
-    return id;
+    const response=await axiosInstance.delete('/category');
+    return response.data;
 }

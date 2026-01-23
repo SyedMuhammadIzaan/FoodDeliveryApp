@@ -21,11 +21,11 @@ export const updateDeliveryData =async (id, bookData) => {
 }
 
 export const deleteDeliveryDataById=async (id)=>{
-    await axiosInstance.delete(`/delivery-info/${id}`);
-    return id;
+    const response=await axiosInstance.delete(`/delivery-info/${id}`);
+    return response.data;
 }
 
 export const deleteAllDelivery=async ()=>{
-    await axiosInstance.delete('/delivery-info');
-    return id;
+    const response=await axiosInstance.delete('/delivery-info');
+    return response.data;
 }

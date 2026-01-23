@@ -1,22 +1,27 @@
 import axiosInstance from "./axiosInstance";
 
-export const createPopularItem=(popularData,file)=>{
-    axiosInstance.post('/popular-item/c/',popularData,file);
+export const createPopularItem=async (popularData,file)=>{
+    const response=await axiosInstance.post('/popular-item/c/',popularData,file);
+    return response.data;
 }
 
-export const getAllPopularItem=()=>{
-    axiosInstance.get('/popular-item');
+export const getAllPopularItem=async ()=>{
+    const response=await axiosInstance.get('/popular-item');
+    return response.data;
 }
 
-export const updatePopularItem=()=>{
-    axiosInstance.put(`/popular-item/${id}`,popularData,file);
+export const updatePopularItem=async (id,popularData,file)=>{
+    const response=await axiosInstance.put(`/popular-item/${id}`,popularData,file);
+    return response.data;
 }
 
-export const deletePopularItem=(id)=>{
-    axiosInstance.delete(`/popular-item/${id}`)
+export const deletePopularItem=async (id)=>{
+    const response=await axiosInstance.delete(`/popular-item/${id}`);
+    return response.data;
 }
 
-export const deleteAllPopularItem=()=>{
-    axiosInstance.delete('/popular-item')
+export const deleteAllPopularItem=async ()=>{
+    const response=await axiosInstance.delete('/popular-item');
+    return response.data;
 }
 
