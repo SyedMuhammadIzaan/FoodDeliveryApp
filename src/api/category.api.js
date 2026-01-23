@@ -1,24 +1,30 @@
 import axiosInstance from "./axiosInstance"
 
-export const createCategory=(data,file)=>{
-    axiosInstance.post('/category/c',data,file);
+export const createCategory=async (data,file)=>{
+    const response=await axiosInstance.post('/category/c',data,file);
+    return response.data;
 }
 
-export const getAllCategory=()=>{
-    axiosInstance.get('/category');
+export const getAllCategory=async ()=>{
+    const response=await axiosInstance.get('/category');
+    return response.data;
 }
-export const updateCatgeoryById=(id,data,file)=>{
-    axiosInstance.update(`/category/${id}`,data,file)
-}
-
-export const getCategoryById=(id)=>{
-    axiosInstance.get(`/category/${id}`)
+export const updateCatgeoryById=async (id,data,file)=>{
+    const response=await axiosInstance.update(`/category/${id}`,data,file)
+    return response.data;
 }
 
-export const deleteCategoryById=(id)=>{
-    axiosInstance.delete(`/category/${id}`)
+export const getCategoryById=async (id)=>{
+    const response=await axiosInstance.get(`/category/${id}`);
+    return response.data;
 }
 
-export const deleteAllCategory=()=>{
-    axiosInstance.delete('/cateory')
+export const deleteCategoryById=async (id)=>{
+    await axiosInstance.delete(`/category/${id}`);
+    return id;
+}
+
+export const deleteAllCategory=async ()=>{
+    await axiosInstance.delete('/category');
+    return id;
 }
