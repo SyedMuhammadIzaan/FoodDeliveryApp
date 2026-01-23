@@ -15,7 +15,7 @@ export const getAllProduct=async ()=>{
     return response.data;
 }
 
-export const updateProduct=async (id,productData,file)=>{
+export const updateProductById=async (id,productData,file)=>{
     const response=await axiosInstance.update(`/product/${id}`,productData,file);
     return response.data;
 }
