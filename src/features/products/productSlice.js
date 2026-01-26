@@ -70,6 +70,8 @@ const productSlice=createSlice({
     }
 
 })
+export const { clearProducts } = productSlice.actions;
+export default productSlice.reducer;
 
 // import { createSlice } from "@reduxjs/toolkit";
 // import { foodItem as initialFoodItem } from "../../constant";
