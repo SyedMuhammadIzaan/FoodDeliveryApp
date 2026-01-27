@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { fetchAllPopularItem } from "../../thunk/popularItemThunks"
+import { fetchAllPopularItem, fetchPopularItemById } from "../../thunk/popularItemThunks"
 
 
 const initialState={
@@ -14,7 +14,7 @@ const popularItemSlice=createSlice({
     initialState,
     reducers:{
         clearPopularItems:(state)=>{
-            state.popularItems=[],
+            state.popularItems=[]
         }
     },
     extraReducers:(builders)=>{
@@ -32,6 +32,21 @@ const popularItemSlice=createSlice({
             state.loading=false;
             state.error=action.error
         })
+
+        .addCase(fetchPopularItemById.pending,(state)=>{
+            state.loading=true;
+        })
+
+        .addCase(fetchPopularItemById.fulfilled,(state,action)=>{
+            state.loading=false;
+            state.popularItems=action.payload;
+        })
+
+        .addCase(fetchPopularItemById.rejected,(state)=>{
+            state.loading=false;
+            state.error=action.error;
+        })
+
     }
 
 })
