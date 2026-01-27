@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { fetchAllPopularItem, fetchPopularItemById } from "../../thunk/popularItemThunks"
+import { createPopularItem, fetchAllPopularItem, fetchPopularItemById, updatePopularItem } from "../../thunk/popularItemThunks"
 
 
 const initialState={
@@ -47,6 +47,14 @@ const popularItemSlice=createSlice({
             state.error=action.error;
         })
 
+        .addCase(createPopularItem.fulfilled,(state,action)=>{
+            state.popularItems=action.payload;
+        })
+
+        .addCase(updatePopularItem.fulfilled,(state,action)=>{
+            const index=state.popularItems.findIndex((item)=> item.id === action.payload.id)
+            if(index !== -1) state.popularItems[index]=action.payload;
+        })
     }
 
 })
