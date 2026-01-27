@@ -5,6 +5,7 @@ const initialState = {
     loading: false,
     error: false,
 }
+
 const addToCartSlice = createSlice({
     name: "addToCart",
     initialState,
@@ -29,3 +30,6 @@ const addToCartSlice = createSlice({
     }
 
 })
+
+export const {createItemIntoCart,deleteCartItem,clearCartItem}=addToCartSlice.actions;
+export default addToCartSlice.reducer;
