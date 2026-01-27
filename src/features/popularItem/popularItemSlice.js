@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import { createPopularItem, fetchAllPopularItem, fetchPopularItemById, updatePopularItem } from "../../thunk/popularItemThunks"
+import { deletePopularItemById } from "../../api/popularItem"
 
 
 const initialState={
@@ -55,6 +56,15 @@ const popularItemSlice=createSlice({
             const index=state.popularItems.findIndex((item)=> item.id === action.payload.id)
             if(index !== -1) state.popularItems[index]=action.payload;
         })
+
+        .addCase(deletePopularItemById.fulfilled,(state,action)=>{
+            const index=state.popularItems.findIndex((item)=> item.id === action.payload.id);
+            if(index !== -1) state.popularItems.splice(index,1)
+
+        })
     }
 
 })
+
+export const {createPopularItem}=popularItemSlice.actions;
+export default popularItemSlice.reducer;
