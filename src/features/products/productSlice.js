@@ -1,5 +1,5 @@
-const { createSlice } = require("@reduxjs/toolkit")
-const { fetchProducts, newProduct, updateProduct, fetchProductById, deleteProduct } = require("../../thunk/productThunks")
+import { createSlice } from "@reduxjs/toolkit"
+import { fetchProducts, newProduct, updateProduct, fetchProductById, deleteProduct } from "../../thunk/productThunks";
 
 const initialState={
     products:[],
@@ -18,10 +18,10 @@ const productSlice=createSlice({
     },
     extraReducers:(builders)=>{
         builders
-        console.log("Builders",builders)
+        // console.log("Builders",builders)
 
         .addCase(fetchProducts.pending,(state)=>{
-            console.log("Pensding State",state)
+            // console.log("Pensding State",state)
             state.loading=true;
         })
         .addCase(fetchProducts.fulfilled,(state,action)=>{
