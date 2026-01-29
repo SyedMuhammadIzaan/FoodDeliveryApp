@@ -84,6 +84,9 @@ const orderSlice = createSlice({
 
 })
 
+export const {removeAll}=orderSlice.actions;
+export default orderSlice.reducer;
+
 const calculateSubtotal = (orders) => {
   return orders.reduce((sum, item) => sum + (item.amount * item.quantity || 0), 0);
 };
