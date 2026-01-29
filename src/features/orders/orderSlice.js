@@ -60,14 +60,15 @@ const orderSlice = createSlice({
         state.pricing.total = state.pricing.subtotal + state.pricing.deliveryFee;
       })
 
-      .addCase(updateDeliveryDataById.fulfilled,(state,action)=>{
-        const index=state.orders.findIndex((orders)=>{
+      .addCase(updateDeliveryDataById.fulfilled, (state, action) => {
+        const index = state.orders.findIndex((orders) => {
           orders.id === action.payload.orders.id
         })
-        if(index !== -1){
-          state.orders[index]=action.payload.orders;
-          state.
+        if (index !== -1) {
+          state.orders[index] = action.payload;
         }
+        state.pricing.subtotal = calculateSubtotal(state.orders);
+        state.pricing.total = state.pricing.subtotal + state.pricing.deliveryFee;
       })
   }
 
