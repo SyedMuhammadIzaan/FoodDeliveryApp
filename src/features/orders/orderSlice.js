@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllDelivery } from "../../api/deliveryinfo.api";
+import { deleteDeliveryDataById, getAllDelivery } from "../../api/deliveryinfo.api";
 
 const initialState = {
   orders: [],
@@ -69,6 +69,16 @@ const orderSlice = createSlice({
         }
         state.pricing.subtotal = calculateSubtotal(state.orders);
         state.pricing.total = state.pricing.subtotal + state.pricing.deliveryFee;
+      })
+
+      .addCase(deleteDeliveryDataById.fulfilled, (state, action) => {
+        const deliveryData = state.orders.filter((deliveries) => {
+          deliveries.id !== action.payload.id
+        })
+
+        state.pricing.subtotal = calculateSubtotal(deliveryData);
+        state.pricing.total =
+          state.pricing.subtotal + state.pricing.deliveryFee;
       })
   }
 
